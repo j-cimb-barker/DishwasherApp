@@ -14,6 +14,7 @@ class ProductsCollectionViewController: UICollectionViewController {
 
     var products = [Product] ()
     
+    var sectionInsets = UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +87,7 @@ class ProductsCollectionViewController: UICollectionViewController {
         
         
         //cell.backgroundColor = UIColor.yellow
-        cell.testLabel.text = "bbb"
+        //cell.testLabel.text = "bbb"
         
         return cell
     }
@@ -135,4 +136,23 @@ class ProductsCollectionViewController: UICollectionViewController {
     }
     */
 
+}
+
+extension ProductsCollectionViewController : UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 151, height: 175)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    
 }

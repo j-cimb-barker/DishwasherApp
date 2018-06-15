@@ -26,6 +26,7 @@
 		5D3ECC9D20D3DFB1008CBE9E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */; };
 		5D3ECC9F20D3E486008CBE9E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */; };
 		5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */; };
+		5D3ECCA320D40B4D008CBE9E /* dishwasher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dishwasher.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		5D3ECC5020D3B933008CBE9E = {
 			isa = PBXGroup;
 			children = (
+				5D3ECCA420D40B57008CBE9E /* Resources */,
 				5D3ECC5B20D3B933008CBE9E /* DishwasherApp */,
 				5D3ECC7020D3B936008CBE9E /* DishwasherAppTests */,
 				5D3ECC7B20D3B936008CBE9E /* DishwasherAppUITests */,
@@ -167,6 +170,22 @@
 				5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		5D3ECCA420D40B57008CBE9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D3ECCA520D40B5F008CBE9E /* Graphics */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D3ECCA520D40B5F008CBE9E /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */,
+			);
+			path = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3ECCA320D40B4D008CBE9E /* dishwasher.jpg in Resources */,
 				5D3ECC6720D3B936008CBE9E /* LaunchScreen.storyboard in Resources */,
 				5D3ECC6420D3B936008CBE9E /* Assets.xcassets in Resources */,
 				5D3ECC9F20D3E486008CBE9E /* ProductCollectionViewCell.xib in Resources */,

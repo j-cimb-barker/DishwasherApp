@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductCollectionViewCell" customModule="DishwasherApp" customModuleProvider="target">
             <connections>
-                <outlet property="testLabel" destination="btf-2K-co3" id="1cj-B3-SaA"/>
                 <outlet property="theView" destination="uI8-mB-EgV" id="GaW-ni-oD7"/>
             </connections>
         </placeholder>
@@ -24,13 +23,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="240" height="193"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btf-2K-co3">
-                        <rect key="frame" x="8" y="9" width="42" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cWl-LN-LyW">
+                        <rect key="frame" x="9" y="10" width="211" height="112"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Miel G6820 SC Freestanding Dishwasher, White £1459.00 " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bN1-pp-kuz">
+                        <rect key="frame" x="42" y="115" width="157" height="78"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,4 +42,7 @@
             <point key="canvasLocation" x="182" y="144.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="dishwasher.jpg" width="1248" height="1248"/>
+    </resources>
 </document>

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--DishWashers-->
         <scene sceneID="Q5Z-UH-PQv">
             <objects>
-                <collectionViewController id="Weh-2u-eVO" customClass="ProductsCollectionViewController" customModule="DishwasherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="Weh-2u-eVO" userLabel="DishWashers" customClass="ProductsCollectionViewController" customModule="DishwasherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zpj-Mb-qhl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                             <outlet property="delegate" destination="Weh-2u-eVO" id="XmS-Xd-iYs"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Title" id="WUm-MX-f0X"/>
+                    <navigationItem key="navigationItem" title="Dishwashers" id="WUm-MX-f0X"/>
                     <connections>
                         <segue destination="GoF-y1-B6a" kind="show" identifier="showDetail" id="bKb-Td-Cud"/>
                     </connections>
