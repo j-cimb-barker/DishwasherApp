@@ -14,6 +14,13 @@
 		5D3ECC6720D3B936008CBE9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC6520D3B936008CBE9E /* LaunchScreen.storyboard */; };
 		5D3ECC7220D3B936008CBE9E /* DishwasherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC7120D3B936008CBE9E /* DishwasherAppTests.swift */; };
 		5D3ECC7D20D3B936008CBE9E /* DishwasherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC7C20D3B936008CBE9E /* DishwasherAppUITests.swift */; };
+		5D3ECC8D20D3BB24008CBE9E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC8C20D3BB24008CBE9E /* Product.swift */; };
+		5D3ECC8E20D3BB24008CBE9E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC8C20D3BB24008CBE9E /* Product.swift */; };
+		5D3ECC9020D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC8F20D3BDFD008CBE9E /* DishwasherDataApi.swift */; };
+		5D3ECC9120D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC8F20D3BDFD008CBE9E /* DishwasherDataApi.swift */; };
+		5D3ECC9320D3BEEC008CBE9E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9220D3BEEC008CBE9E /* Logging.swift */; };
+		5D3ECC9420D3BEEC008CBE9E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9220D3BEEC008CBE9E /* Logging.swift */; };
+		5D3ECC9620D3BF62008CBE9E /* DishwasherDataApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9520D3BF62008CBE9E /* DishwasherDataApiTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,10 @@
 		5D3ECC7820D3B936008CBE9E /* DishwasherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DishwasherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3ECC7C20D3B936008CBE9E /* DishwasherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishwasherAppUITests.swift; sourceTree = "<group>"; };
 		5D3ECC7E20D3B936008CBE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D3ECC8C20D3BB24008CBE9E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		5D3ECC8F20D3BDFD008CBE9E /* DishwasherDataApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishwasherDataApi.swift; sourceTree = "<group>"; };
+		5D3ECC9220D3BEEC008CBE9E /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		5D3ECC9520D3BF62008CBE9E /* DishwasherDataApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishwasherDataApiTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +108,9 @@
 		5D3ECC5B20D3B933008CBE9E /* DishwasherApp */ = {
 			isa = PBXGroup;
 			children = (
+				5D3ECC9220D3BEEC008CBE9E /* Logging.swift */,
+				5D3ECC8B20D3BAEE008CBE9E /* UI */,
+				5D3ECC8A20D3BAE7008CBE9E /* Core */,
 				5D3ECC5C20D3B933008CBE9E /* AppDelegate.swift */,
 				5D3ECC5E20D3B933008CBE9E /* ViewController.swift */,
 				5D3ECC6020D3B933008CBE9E /* Main.storyboard */,
@@ -112,6 +126,7 @@
 			children = (
 				5D3ECC7120D3B936008CBE9E /* DishwasherAppTests.swift */,
 				5D3ECC7320D3B936008CBE9E /* Info.plist */,
+				5D3ECC9520D3BF62008CBE9E /* DishwasherDataApiTest.swift */,
 			);
 			path = DishwasherAppTests;
 			sourceTree = "<group>";
@@ -123,6 +138,22 @@
 				5D3ECC7E20D3B936008CBE9E /* Info.plist */,
 			);
 			path = DishwasherAppUITests;
+			sourceTree = "<group>";
+		};
+		5D3ECC8A20D3BAE7008CBE9E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5D3ECC8C20D3BB24008CBE9E /* Product.swift */,
+				5D3ECC8F20D3BDFD008CBE9E /* DishwasherDataApi.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5D3ECC8B20D3BAEE008CBE9E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3ECC9020D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
+				5D3ECC9320D3BEEC008CBE9E /* Logging.swift in Sources */,
 				5D3ECC5F20D3B933008CBE9E /* ViewController.swift in Sources */,
 				5D3ECC5D20D3B933008CBE9E /* AppDelegate.swift in Sources */,
+				5D3ECC8D20D3BB24008CBE9E /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3ECC9620D3BF62008CBE9E /* DishwasherDataApiTest.swift in Sources */,
 				5D3ECC7220D3B936008CBE9E /* DishwasherAppTests.swift in Sources */,
+				5D3ECC8E20D3BB24008CBE9E /* Product.swift in Sources */,
+				5D3ECC9120D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
+				5D3ECC9420D3BEEC008CBE9E /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
