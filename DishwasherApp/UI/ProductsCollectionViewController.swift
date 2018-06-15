@@ -54,15 +54,15 @@ class ProductsCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -93,6 +93,19 @@ class ProductsCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        Logging.JLog(message: "got tap")
+        //self.performSegue(withIdentifier: "showDetail", sender: self)
+        
+        let detailController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController")
+        
+        self.navigationController?.pushViewController(detailController!, animated: true)
+        
+        
+    }
+    
+    
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

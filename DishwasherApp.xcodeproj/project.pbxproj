@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5D3ECC5D20D3B933008CBE9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC5C20D3B933008CBE9E /* AppDelegate.swift */; };
-		5D3ECC5F20D3B933008CBE9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC5E20D3B933008CBE9E /* ViewController.swift */; };
 		5D3ECC6220D3B933008CBE9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC6020D3B933008CBE9E /* Main.storyboard */; };
 		5D3ECC6420D3B936008CBE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC6320D3B936008CBE9E /* Assets.xcassets */; };
 		5D3ECC6720D3B936008CBE9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC6520D3B936008CBE9E /* LaunchScreen.storyboard */; };
@@ -26,6 +25,7 @@
 		5D3ECC9B20D3D0ED008CBE9E /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9920D3D0ED008CBE9E /* MockProduct.swift */; };
 		5D3ECC9D20D3DFB1008CBE9E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */; };
 		5D3ECC9F20D3E486008CBE9E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */; };
+		5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 /* Begin PBXFileReference section */
 		5D3ECC5920D3B933008CBE9E /* DishwasherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishwasherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3ECC5C20D3B933008CBE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D3ECC5E20D3B933008CBE9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D3ECC6120D3B933008CBE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D3ECC6320D3B936008CBE9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D3ECC6620D3B936008CBE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		5D3ECC9920D3D0ED008CBE9E /* MockProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProduct.swift; sourceTree = "<group>"; };
 		5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,6 @@
 				5D3ECC8B20D3BAEE008CBE9E /* UI */,
 				5D3ECC8A20D3BAE7008CBE9E /* Core */,
 				5D3ECC5C20D3B933008CBE9E /* AppDelegate.swift */,
-				5D3ECC5E20D3B933008CBE9E /* ViewController.swift */,
 				5D3ECC6020D3B933008CBE9E /* Main.storyboard */,
 				5D3ECC6320D3B936008CBE9E /* Assets.xcassets */,
 				5D3ECC6520D3B936008CBE9E /* LaunchScreen.storyboard */,
@@ -162,6 +161,7 @@
 		5D3ECC8B20D3BAEE008CBE9E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */,
 				5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */,
 				5D3ECC9720D3D024008CBE9E /* ProductsCollectionViewController.swift */,
 				5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */,
@@ -304,9 +304,9 @@
 				5D3ECC9020D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
 				5D3ECC9320D3BEEC008CBE9E /* Logging.swift in Sources */,
 				5D3ECC9D20D3DFB1008CBE9E /* ProductCollectionViewCell.swift in Sources */,
-				5D3ECC5F20D3B933008CBE9E /* ViewController.swift in Sources */,
 				5D3ECC5D20D3B933008CBE9E /* AppDelegate.swift in Sources */,
 				5D3ECC9820D3D024008CBE9E /* ProductsCollectionViewController.swift in Sources */,
+				5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */,
 				5D3ECC8D20D3BB24008CBE9E /* Product.swift in Sources */,
 				5D3ECC9A20D3D0ED008CBE9E /* MockProduct.swift in Sources */,
 			);
@@ -489,6 +489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,6 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

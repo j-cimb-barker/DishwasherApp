@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Weh-2u-eVO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IBi-Iz-SlG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,21 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DishwasherApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Products Collection View Controller-->
+        <!--Title-->
         <scene sceneID="Q5Z-UH-PQv">
             <objects>
                 <collectionViewController id="Weh-2u-eVO" customClass="ProductsCollectionViewController" customModule="DishwasherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,10 +39,62 @@
                             <outlet property="delegate" destination="Weh-2u-eVO" id="XmS-Xd-iYs"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Title" id="WUm-MX-f0X"/>
+                    <connections>
+                        <segue destination="GoF-y1-B6a" kind="show" identifier="showDetail" id="bKb-Td-Cud"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hky-RA-G7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="27"/>
+            <point key="canvasLocation" x="-345" y="-451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qbR-vy-hB2">
+            <objects>
+                <navigationController id="IBi-Iz-SlG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d3m-HW-Uvh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Weh-2u-eVO" kind="relationship" relationship="rootViewController" id="YKv-ro-S1m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwe-t0-dbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1268" y="-512"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lia-nP-rnY">
+            <objects>
+                <navigationController id="GoF-y1-B6a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ih-KL-gVz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="siS-8V-T9h" kind="relationship" relationship="rootViewController" id="WYi-Xa-jMA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnI-bN-w9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="-561"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="6Eg-BB-WfF">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailViewController" id="siS-8V-T9h" customClass="ProductDetailViewController" customModule="DishwasherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R5v-fT-pgz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pz0-nn-Z4B"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1B2-oo-hKe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-ef-CWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="366"/>
         </scene>
     </scenes>
 </document>
