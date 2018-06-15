@@ -17,7 +17,7 @@ class Product: NSObject {
     var imageURL: URL?
     
     var media = [String:Any] ()
-    var details = [String:String] ()
+    var details = [String:Any] ()
     var additionalServices = [String:Any] ()
     var code = ""
     var features = [[String:Any]] ()
@@ -45,6 +45,24 @@ class Product: NSObject {
             self.media = jsonDict ["media"] as! [String:Any]
         }
         
+        if jsonDict ["code"] != nil {
+            self.code = jsonDict ["code"] as! String
+        }
+        
+        
+        if jsonDict ["details"] != nil {
+            
+            self.details = jsonDict ["details"] as! [String:Any]
+        }
+        
+        if jsonDict ["additionalServices"] != nil {
+            self.additionalServices = jsonDict ["additionalServices"] as! [String:Any]
+        }
+        
+        if jsonDict ["features"] != nil {
+            self.features = jsonDict ["features"] as! [[String:Any]]
+        }
+        
     }
    
     
@@ -52,7 +70,9 @@ class Product: NSObject {
         
         var descrStr = "productId : \(productId), title : \(title), priceDict : \(priceDict)"
         
-        descrStr = descrStr + ", mmedia : \(media)"
+        descrStr = descrStr + ", media : \(media), details : \(details)"
+        descrStr = descrStr + ", additionalServices : \(additionalServices), features : \(features)"
+        descrStr = descrStr + ", code : \(code)"
         
         return descrStr
     }
