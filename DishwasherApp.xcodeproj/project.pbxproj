@@ -21,6 +21,11 @@
 		5D3ECC9320D3BEEC008CBE9E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9220D3BEEC008CBE9E /* Logging.swift */; };
 		5D3ECC9420D3BEEC008CBE9E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9220D3BEEC008CBE9E /* Logging.swift */; };
 		5D3ECC9620D3BF62008CBE9E /* DishwasherDataApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9520D3BF62008CBE9E /* DishwasherDataApiTest.swift */; };
+		5D3ECC9820D3D024008CBE9E /* ProductsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9720D3D024008CBE9E /* ProductsCollectionViewController.swift */; };
+		5D3ECC9A20D3D0ED008CBE9E /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9920D3D0ED008CBE9E /* MockProduct.swift */; };
+		5D3ECC9B20D3D0ED008CBE9E /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9920D3D0ED008CBE9E /* MockProduct.swift */; };
+		5D3ECC9D20D3DFB1008CBE9E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */; };
+		5D3ECC9F20D3E486008CBE9E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,10 @@
 		5D3ECC8F20D3BDFD008CBE9E /* DishwasherDataApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishwasherDataApi.swift; sourceTree = "<group>"; };
 		5D3ECC9220D3BEEC008CBE9E /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		5D3ECC9520D3BF62008CBE9E /* DishwasherDataApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishwasherDataApiTest.swift; sourceTree = "<group>"; };
+		5D3ECC9720D3D024008CBE9E /* ProductsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewController.swift; sourceTree = "<group>"; };
+		5D3ECC9920D3D0ED008CBE9E /* MockProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProduct.swift; sourceTree = "<group>"; };
+		5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +154,7 @@
 			children = (
 				5D3ECC8C20D3BB24008CBE9E /* Product.swift */,
 				5D3ECC8F20D3BDFD008CBE9E /* DishwasherDataApi.swift */,
+				5D3ECC9920D3D0ED008CBE9E /* MockProduct.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -152,6 +162,9 @@
 		5D3ECC8B20D3BAEE008CBE9E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5D3ECC9C20D3DFB1008CBE9E /* ProductCollectionViewCell.swift */,
+				5D3ECC9720D3D024008CBE9E /* ProductsCollectionViewController.swift */,
+				5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -262,6 +275,7 @@
 			files = (
 				5D3ECC6720D3B936008CBE9E /* LaunchScreen.storyboard in Resources */,
 				5D3ECC6420D3B936008CBE9E /* Assets.xcassets in Resources */,
+				5D3ECC9F20D3E486008CBE9E /* ProductCollectionViewCell.xib in Resources */,
 				5D3ECC6220D3B933008CBE9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,9 +303,12 @@
 			files = (
 				5D3ECC9020D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
 				5D3ECC9320D3BEEC008CBE9E /* Logging.swift in Sources */,
+				5D3ECC9D20D3DFB1008CBE9E /* ProductCollectionViewCell.swift in Sources */,
 				5D3ECC5F20D3B933008CBE9E /* ViewController.swift in Sources */,
 				5D3ECC5D20D3B933008CBE9E /* AppDelegate.swift in Sources */,
+				5D3ECC9820D3D024008CBE9E /* ProductsCollectionViewController.swift in Sources */,
 				5D3ECC8D20D3BB24008CBE9E /* Product.swift in Sources */,
+				5D3ECC9A20D3D0ED008CBE9E /* MockProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +321,7 @@
 				5D3ECC8E20D3BB24008CBE9E /* Product.swift in Sources */,
 				5D3ECC9120D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
 				5D3ECC9420D3BEEC008CBE9E /* Logging.swift in Sources */,
+				5D3ECC9B20D3D0ED008CBE9E /* MockProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

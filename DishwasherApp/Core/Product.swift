@@ -49,9 +49,7 @@ class Product: NSObject {
             self.code = jsonDict ["code"] as! String
         }
         
-        
         if jsonDict ["details"] != nil {
-            
             self.details = jsonDict ["details"] as! [String:Any]
         }
         
