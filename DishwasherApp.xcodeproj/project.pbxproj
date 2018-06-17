@@ -28,6 +28,7 @@
 		5D3ECC9F20D3E486008CBE9E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */; };
 		5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */; };
 		5D3ECCA320D40B4D008CBE9E /* dishwasher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */; };
+		D12777418780FC1ACDC92071 /* Pods_DishwasherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236B0D6F90C58BC51C2B6D26 /* Pods_DishwasherApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D223B3E1CA045226AED887 /* Pods-DishwasherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishwasherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DishwasherApp/Pods-DishwasherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		236B0D6F90C58BC51C2B6D26 /* Pods_DishwasherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishwasherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D18DB5220D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Utils.swift"; sourceTree = "<group>"; };
 		5D3ECC5920D3B933008CBE9E /* DishwasherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishwasherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3ECC5C20D3B933008CBE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dishwasher.jpg; sourceTree = "<group>"; };
+		D37F27256F0C86FC1A88595C /* Pods-DishwasherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishwasherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DishwasherApp/Pods-DishwasherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12777418780FC1ACDC92071 /* Pods_DishwasherApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B25BEFC0F64A312001996B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				236B0D6F90C58BC51C2B6D26 /* Pods_DishwasherApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C48B73989CF8503F50A4980 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09D223B3E1CA045226AED887 /* Pods-DishwasherApp.debug.xcconfig */,
+				D37F27256F0C86FC1A88595C /* Pods-DishwasherApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5D18DB5120D6BA22009F2EB6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +136,8 @@
 				5D3ECC7020D3B936008CBE9E /* DishwasherAppTests */,
 				5D3ECC7B20D3B936008CBE9E /* DishwasherAppUITests */,
 				5D3ECC5A20D3B933008CBE9E /* Products */,
+				2C48B73989CF8503F50A4980 /* Pods */,
+				01B25BEFC0F64A312001996B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D3ECC8120D3B936008CBE9E /* Build configuration list for PBXNativeTarget "DishwasherApp" */;
 			buildPhases = (
+				9899E8295E0334280ED7E6BC /* [CP] Check Pods Manifest.lock */,
 				5D3ECC5520D3B933008CBE9E /* Sources */,
 				5D3ECC5620D3B933008CBE9E /* Frameworks */,
 				5D3ECC5720D3B933008CBE9E /* Resources */,
+				90022C651FDE8E999F206085 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,6 +352,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90022C651FDE8E999F206085 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DishwasherApp/Pods-DishwasherApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DishwasherApp/Pods-DishwasherApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9899E8295E0334280ED7E6BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DishwasherApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D3ECC5520D3B933008CBE9E /* Sources */ = {
@@ -516,16 +581,14 @@
 		};
 		5D3ECC8220D3B936008CBE9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D223B3E1CA045226AED887 /* Pods-DishwasherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -535,16 +598,14 @@
 		};
 		5D3ECC8320D3B936008CBE9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D37F27256F0C86FC1A88595C /* Pods-DishwasherApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -560,11 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -581,11 +638,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -601,11 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -621,11 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

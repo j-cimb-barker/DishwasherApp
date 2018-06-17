@@ -136,14 +136,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-W9-SYO">
                                 <rect key="frame" x="0.0" y="64" width="768" height="374"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-aW-TBp">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-aW-TBp">
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="374"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fsk-VU-a1h">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fsk-VU-a1h">
                                         <rect key="frame" x="264" y="0.0" width="240" height="374"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r8Z-HN-rDw">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r8Z-HN-rDw">
                                         <rect key="frame" x="264" y="0.0" width="240" height="374"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -196,20 +196,20 @@
                         <viewLayoutGuide key="safeArea" id="pz0-nn-Z4B"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="jSa-w5-Kc7"/>
                                 <exclude reference="bTD-wV-Kiz"/>
                                 <exclude reference="daQ-Wk-nco"/>
-                                <exclude reference="jSa-w5-Kc7"/>
                                 <exclude reference="pa9-Zh-HsI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <exclude reference="6us-r9-zRl"/>
+                                <include reference="jSa-w5-Kc7"/>
                                 <include reference="bTD-wV-Kiz"/>
                                 <exclude reference="bgN-OF-IcV"/>
                                 <include reference="daQ-Wk-nco"/>
                                 <exclude reference="wk8-yE-OVP"/>
-                                <exclude reference="6us-r9-zRl"/>
-                                <include reference="jSa-w5-Kc7"/>
                                 <exclude reference="8Qh-i9-K3n"/>
                                 <include reference="pa9-Zh-HsI"/>
                             </mask>

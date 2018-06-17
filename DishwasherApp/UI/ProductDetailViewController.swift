@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductDetailViewController: UIViewController {
 
     var product = Product ()
     
-    var productImgs = [UIImageView] ()
+    var productImgViews = [UIImageView] ()
     
     @IBOutlet weak var productImgView: UIImageView!
     
@@ -44,7 +45,15 @@ class ProductDetailViewController: UIViewController {
         productSpecTableView.dataSource = self
         
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.setupProductImages()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
 
     func setupProductImages () {
@@ -58,9 +67,33 @@ class ProductDetailViewController: UIViewController {
         
         //let prodImages = self.product.media ["images"] as! [String:Any]
         
+        Logging.JLog(message: "scrollViewWidth : \(scrollViewWidth)")
+        
         self.scrollView.contentSize = CGSize(width:scrollViewWidth * CGFloat (self.imgPageCtrl.numberOfPages), height:self.scrollView.frame.height)
         
-        for imgUrlStr in self.product.images {
+        for counter in 0...(self.product.images.count - 1) {
+            
+            let imgViewFrame = CGRect (x: scrollViewWidth * CGFloat(counter), y: 0, width: scrollViewWidth, height: scrollViewHeight)
+            
+            let imgView = UIImageView.init(frame: imgViewFrame)
+            imgView.contentMode = .scaleAspectFit
+            
+            imgView.sd_setImage(with: URL(string: self.product.images[counter]), completed: { (image, error, cacheType, imageURL) in
+                // Perform operation.
+                
+                /*
+                Logging.JLog(message: "got img with size : \(image?.size)")
+                
+                var resizedImg = self.resizeImage(image: image!, newWidth: imgView.frame.size.width)
+                imgView.image = resizedImg*/
+                
+            })
+            
+            //imgView.sd_setImage(with: URL(string: self.product.images[counter]), placeholderImage: UIImage(named: "placeholder.png"))
+            //imgView.frame = imgViewFrame
+            
+            
+            self.scrollView.addSubview(imgView)
             
         }
         
@@ -69,6 +102,19 @@ class ProductDetailViewController: UIViewController {
         
         self.productImg3.frame = CGRect (x: scrollViewWidth * 2, y: 0, width: scrollViewWidth, height: scrollViewHeight)
     }
+    
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
     
     
     @IBAction func imgPageCtrlChanged(_ sender: UIPageControl) {
@@ -99,6 +145,9 @@ class ProductDetailViewController: UIViewController {
     }
     */
     
+    override func viewDidLayoutSubviews() {
+        Logging.JLog(message: "viewDidLayoutSubviews")
+    }
     
     override public var traitCollection: UITraitCollection {
         
@@ -109,6 +158,8 @@ class ProductDetailViewController: UIViewController {
             return UITraitCollection (traitsFrom: [UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .regular)])
             
         }
+        
+        
         
         Logging.JLog(message: "ddddd")
         return super.traitCollection
