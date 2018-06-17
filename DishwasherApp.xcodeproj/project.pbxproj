@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D18DB5320D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18DB5220D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift */; };
 		5D3ECC5D20D3B933008CBE9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECC5C20D3B933008CBE9E /* AppDelegate.swift */; };
 		5D3ECC6220D3B933008CBE9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC6020D3B933008CBE9E /* Main.storyboard */; };
 		5D3ECC6420D3B936008CBE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC6320D3B936008CBE9E /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D18DB5220D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Utils.swift"; sourceTree = "<group>"; };
 		5D3ECC5920D3B933008CBE9E /* DishwasherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishwasherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3ECC5C20D3B933008CBE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3ECC6120D3B933008CBE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D18DB5120D6BA22009F2EB6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D18DB5220D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5D3ECC5020D3B933008CBE9E = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 		5D3ECCA420D40B57008CBE9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5D18DB5120D6BA22009F2EB6 /* Utils */,
 				5D3ECCA520D40B5F008CBE9E /* Graphics */,
 			);
 			path = Resources;
@@ -328,6 +339,7 @@
 				5D3ECC9820D3D024008CBE9E /* ProductsCollectionViewController.swift in Sources */,
 				5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */,
 				5D3ECC8D20D3BB24008CBE9E /* Product.swift in Sources */,
+				5D18DB5320D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift in Sources */,
 				5D3ECC9A20D3D0ED008CBE9E /* MockProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -84,7 +84,7 @@ class ProductsCollectionViewController: UICollectionViewController {
     
         Logging.JLog(message: "cellForItemAt")
      
-        
+        cell.setDescription(descr: "Dishwasher text", priceStr: "231.99")
         
         //cell.backgroundColor = UIColor.yellow
         //cell.testLabel.text = "bbb"
@@ -144,8 +144,13 @@ extension ProductsCollectionViewController : UICollectionViewDelegateFlowLayout 
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 151, height: 175)
+        //return CGSize(width: 151, height: 175)
+        return CGSize(width: 200, height: 250)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 120
     }
     
     func collectionView(_ collectionView: UICollectionView,

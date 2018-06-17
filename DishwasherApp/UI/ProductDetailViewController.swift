@@ -10,6 +10,21 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
 
+    @IBOutlet weak var productImgVIew: UIImageView!
+   
+    
+    @IBOutlet weak var productDescrTextView: UITextView!
+   
+    
+    @IBOutlet weak var productDetailsTextView: UITextView!
+    
+    @IBOutlet weak var productDetailsTableView: UITableView!
+    
+    let headings = [
+        "Heading1",
+        "Heading2"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,3 +48,27 @@ class ProductDetailViewController: UIViewController {
     */
 
 }
+
+extension ProductDetailViewController : UITableViewDelegate {
+    
+}
+
+extension ProductDetailViewController : UITableViewDataSource {
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.headings.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell = productDetailsTableView.dequeueReusableCell(withIdentifier: "profileCell")!
+        
+        return cell
+    }
+    
+    
+}
+

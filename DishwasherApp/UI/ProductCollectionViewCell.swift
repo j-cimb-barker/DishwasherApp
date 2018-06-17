@@ -12,6 +12,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var testLabel: UILabel!
     
+    @IBOutlet weak var productImgView: UIImageView!
+    
+    @IBOutlet weak var productTextView: UITextView!
+    
     var size = CGSize (width: 0, height: 0)
     
     @IBOutlet var theView: UICollectionViewCell!
@@ -34,9 +38,26 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     private func commonInit () {
         
-        //theView.frame.size = self.size
-        
         Bundle.main.loadNibNamed("ProductCollectionViewCell", owner:self, options: nil)
+        
+        Logging.JLog(message: "theView: \(theView)")
+        
+        theView.frame.size = self.size
+        
+        
         self.addSubview(theView)
     }
+    
+    // sets the description of the item
+    func setDescription (descr: String, priceStr: String) {
+        
+        let fullDescrStr = NSMutableAttributedString()
+        
+        fullDescrStr.normal (descr)
+        fullDescrStr.bold("\n" + priceStr)
+        
+        self.productTextView.attributedText = fullDescrStr
+        
+    }
+    
 }
