@@ -10,6 +10,9 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
 
+    var product = Product ()
+    
+    var productImgs = [UIImageView] ()
     
     @IBOutlet weak var productImgView: UIImageView!
     
@@ -51,7 +54,16 @@ class ProductDetailViewController: UIViewController {
         
         self.scrollView.delegate = self
         
-        self.scrollView.contentSize = CGSize(width:scrollViewWidth * 3, height:self.scrollView.frame.height)
+        self.imgPageCtrl.numberOfPages = self.product.images.count
+        
+        //let prodImages = self.product.media ["images"] as! [String:Any]
+        
+        self.scrollView.contentSize = CGSize(width:scrollViewWidth * CGFloat (self.imgPageCtrl.numberOfPages), height:self.scrollView.frame.height)
+        
+        for imgUrlStr in self.product.images {
+            
+        }
+        
         
         self.productImg2.frame = CGRect (x: scrollViewWidth, y: 0, width: scrollViewWidth, height: scrollViewHeight)
         

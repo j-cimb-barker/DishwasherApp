@@ -54,7 +54,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         let fullDescrStr = NSMutableAttributedString()
         
         fullDescrStr.normal (descr)
-        fullDescrStr.bold("\n" + priceStr)
+        fullDescrStr.bold("\n£" + priceStr)
         
         self.productTextView.attributedText = fullDescrStr
         

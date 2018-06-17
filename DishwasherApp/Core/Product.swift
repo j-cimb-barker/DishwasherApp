@@ -16,7 +16,7 @@ class Product: NSObject {
     
     var imageURL: URL?
     
-    var media = [String:Any] ()
+    var images = [String] ()
     var details = [String:Any] ()
     var additionalServices = [String:Any] ()
     var code = ""
@@ -27,6 +27,8 @@ class Product: NSObject {
     }
  
     init (jsonDict: [String : Any]) {
+        
+        super.init()
         
         self.title = jsonDict ["title"] as! String
         
@@ -42,7 +44,7 @@ class Product: NSObject {
         }
         
         if jsonDict ["media"] != nil {
-            self.media = jsonDict ["media"] as! [String:Any]
+            processImgData(imgData: jsonDict ["media"] as! [String:Any])
         }
         
         if jsonDict ["code"] != nil {
@@ -54,7 +56,12 @@ class Product: NSObject {
         }
         
         if jsonDict ["additionalServices"] != nil {
-            self.additionalServices = jsonDict ["additionalServices"] as! [String:Any]
+            
+            if jsonDict ["additionalServices"] is Dictionary<String,Any>  {
+                 self.additionalServices = jsonDict ["additionalServices"] as! [String:Any]
+            }
+            
+           
         }
         
         if jsonDict ["features"] != nil {
@@ -63,12 +70,28 @@ class Product: NSObject {
         
     }
    
+    func processImgData (imgData: Dictionary<String,Any>) {
+        
+        let prodImages = imgData ["images"] as! [String:Any]
+        
+        Logging.JLog(message: "prodImages : \(prodImages)")
+        
+        let prodImgArray = prodImages ["urls"] as! [String]
+        
+        for prodImg in prodImgArray {
+            Logging.JLog(message: "prodImg : \(prodImg)")
+            
+            let fullImg = "https:" + prodImg
+            self.images.append(fullImg)
+        }
+        
+    }
     
     override var description : String {
         
         var descrStr = "productId : \(productId), title : \(title), priceDict : \(priceDict)"
         
-        descrStr = descrStr + ", media : \(media), details : \(details)"
+        descrStr = descrStr + ", images : \(images), details : \(details)"
         descrStr = descrStr + ", additionalServices : \(additionalServices), features : \(features)"
         descrStr = descrStr + ", code : \(code)"
         

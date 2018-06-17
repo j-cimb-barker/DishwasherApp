@@ -33,7 +33,8 @@ class DishwasherDataApiTest: XCTestCase {
             
             XCTAssert(errorStr == "")
             
-            
+            XCTAssert(product.images.count > 0)
+            XCTAssert(product.images.contains("https://johnlewis.scene7.com/is/image/JohnLewis/234378764alt9?"))
             
             exp.fulfill()
             

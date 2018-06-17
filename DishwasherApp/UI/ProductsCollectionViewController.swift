@@ -84,10 +84,9 @@ class ProductsCollectionViewController: UICollectionViewController {
     
         Logging.JLog(message: "cellForItemAt")
      
-        cell.setDescription(descr: "Dishwasher text", priceStr: "231.99")
+        let product = self.products [indexPath.row]
         
-        //cell.backgroundColor = UIColor.yellow
-        //cell.testLabel.text = "bbb"
+        cell.setDescription(descr: product.title, priceStr: product.priceDict ["now"]!)
         
         return cell
     }
@@ -98,9 +97,10 @@ class ProductsCollectionViewController: UICollectionViewController {
         Logging.JLog(message: "got tap")
         //self.performSegue(withIdentifier: "showDetail", sender: self)
         
-        let detailController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController")
+        let detailController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
+        detailController.product = self.products [indexPath.row]
         
-        self.navigationController?.pushViewController(detailController!, animated: true)
+        self.navigationController?.pushViewController(detailController, animated: true)
         
         
     }
