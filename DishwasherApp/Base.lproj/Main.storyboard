@@ -90,10 +90,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vYW-66-8F4">
-                                <rect key="frame" x="0.0" y="64" width="768" height="374"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-XS-5US">
                                 <rect key="frame" x="0.0" y="438" width="230.5" height="102.5"/>
                                 <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,7 +107,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lme-LU-VFf">
-                                <rect key="frame" x="0.0" y="573" width="768" height="122.5"/>
+                                <rect key="frame" x="0.0" y="540.5" width="768" height="122.5"/>
                                 <color key="backgroundColor" red="1" green="0.42625336209999998" blue="0.46162378840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Product Information">
@@ -124,7 +120,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZXE-N1-zZl">
-                                <rect key="frame" x="0.0" y="703" width="768" height="320.5"/>
+                                <rect key="frame" x="0.0" y="670.5" width="768" height="353"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCell" id="TLB-up-8Zg">
@@ -137,57 +133,94 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-W9-SYO">
+                                <rect key="frame" x="0.0" y="64" width="768" height="374"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-aW-TBp">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="374"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fsk-VU-a1h">
+                                        <rect key="frame" x="264" y="0.0" width="240" height="374"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dishwasher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r8Z-HN-rDw">
+                                        <rect key="frame" x="264" y="0.0" width="240" height="374"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sCi-aW-TBp" firstAttribute="height" secondItem="eiH-W9-SYO" secondAttribute="height" id="7B7-lW-Gg9"/>
+                                    <constraint firstItem="sCi-aW-TBp" firstAttribute="width" secondItem="eiH-W9-SYO" secondAttribute="width" id="8xp-CZ-WIe"/>
+                                    <constraint firstItem="sCi-aW-TBp" firstAttribute="leading" secondItem="eiH-W9-SYO" secondAttribute="leading" id="PLc-LF-7Ko"/>
+                                    <constraint firstItem="sCi-aW-TBp" firstAttribute="top" secondItem="eiH-W9-SYO" secondAttribute="top" id="Sb4-nK-RoY"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="bog-g9-lge">
+                                <rect key="frame" x="345.5" y="381.5" width="77" height="36.5"/>
+                                <color key="backgroundColor" red="0.98628491159999998" green="0.84482437369999996" blue="0.545458734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bog-g9-lge" secondAttribute="height" multiplier="78:37" id="kWj-by-ZU7"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="imgPageCtrlChanged:" destination="siS-8V-T9h" eventType="valueChanged" id="Atd-kH-Qi0"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="eiH-W9-SYO" firstAttribute="leading" secondItem="pz0-nn-Z4B" secondAttribute="leading" id="3dX-tV-p6M"/>
+                            <constraint firstItem="eiH-W9-SYO" firstAttribute="height" secondItem="R5v-fT-pgz" secondAttribute="height" multiplier="0.365" id="3uV-aM-KrP"/>
                             <constraint firstItem="ZXE-N1-zZl" firstAttribute="leading" secondItem="pz0-nn-Z4B" secondAttribute="leading" id="5uo-8d-GJX"/>
+                            <constraint firstItem="eiH-W9-SYO" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" id="6us-r9-zRl"/>
+                            <constraint firstItem="lme-LU-VFf" firstAttribute="top" secondItem="hfI-XS-5US" secondAttribute="bottom" id="8Qh-i9-K3n"/>
                             <constraint firstItem="hfI-XS-5US" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" multiplier="0.3" id="A2Y-Qc-hsx"/>
-                            <constraint firstItem="lme-LU-VFf" firstAttribute="top" secondItem="vYW-66-8F4" secondAttribute="bottom" id="Ggf-SN-XC9"/>
-                            <constraint firstItem="ZXE-N1-zZl" firstAttribute="width" secondItem="vYW-66-8F4" secondAttribute="width" id="M4d-j2-RM8"/>
+                            <constraint firstItem="lme-LU-VFf" firstAttribute="width" secondItem="eiH-W9-SYO" secondAttribute="width" id="Cx7-DW-pVl"/>
+                            <constraint firstItem="ZXE-N1-zZl" firstAttribute="width" secondItem="eiH-W9-SYO" secondAttribute="width" id="LmB-HB-kxM"/>
                             <constraint firstItem="lme-LU-VFf" firstAttribute="leading" secondItem="pz0-nn-Z4B" secondAttribute="leading" id="N6H-fI-HAo"/>
-                            <constraint firstItem="vYW-66-8F4" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" multiplier="0.7" id="V4b-9E-BH4"/>
-                            <constraint firstItem="vYW-66-8F4" firstAttribute="height" secondItem="R5v-fT-pgz" secondAttribute="height" multiplier="0.365" id="VIK-aJ-lJG"/>
+                            <constraint firstItem="eiH-W9-SYO" firstAttribute="top" secondItem="pz0-nn-Z4B" secondAttribute="top" id="OGx-an-MYs"/>
                             <constraint firstItem="ZXE-N1-zZl" firstAttribute="bottom" secondItem="pz0-nn-Z4B" secondAttribute="bottom" id="WEY-QU-eFC"/>
-                            <constraint firstItem="vYW-66-8F4" firstAttribute="top" secondItem="pz0-nn-Z4B" secondAttribute="top" id="Yfp-9F-faZ"/>
-                            <constraint firstItem="vYW-66-8F4" firstAttribute="width" secondItem="pz0-nn-Z4B" secondAttribute="width" id="ZIe-UH-i4k"/>
+                            <constraint firstItem="bog-g9-lge" firstAttribute="centerX" secondItem="eiH-W9-SYO" secondAttribute="centerX" id="X5h-Wz-gXh"/>
+                            <constraint firstItem="hfI-XS-5US" firstAttribute="top" secondItem="eiH-W9-SYO" secondAttribute="bottom" id="bTD-wV-Kiz"/>
                             <constraint firstItem="hfI-XS-5US" firstAttribute="leading" secondItem="pz0-nn-Z4B" secondAttribute="leading" id="bgN-OF-IcV"/>
                             <constraint firstItem="ZXE-N1-zZl" firstAttribute="top" secondItem="lme-LU-VFf" secondAttribute="bottom" constant="8" id="bpl-08-GMP"/>
                             <constraint firstItem="hfI-XS-5US" firstAttribute="trailing" secondItem="pz0-nn-Z4B" secondAttribute="trailing" id="daQ-Wk-nco"/>
-                            <constraint firstItem="hfI-XS-5US" firstAttribute="top" secondItem="vYW-66-8F4" secondAttribute="top" id="deh-aA-5Js"/>
-                            <constraint firstItem="hfI-XS-5US" firstAttribute="top" secondItem="vYW-66-8F4" secondAttribute="bottom" id="hsy-IR-QSe"/>
+                            <constraint firstItem="bog-g9-lge" firstAttribute="width" secondItem="eiH-W9-SYO" secondAttribute="width" multiplier="0.1" id="htR-O6-7eV"/>
                             <constraint firstItem="lme-LU-VFf" firstAttribute="height" secondItem="R5v-fT-pgz" secondAttribute="height" multiplier="0.12" id="iJt-3o-dxI"/>
-                            <constraint firstItem="vYW-66-8F4" firstAttribute="leading" secondItem="pz0-nn-Z4B" secondAttribute="leading" id="kCk-lC-KA9"/>
-                            <constraint firstItem="lme-LU-VFf" firstAttribute="top" secondItem="vYW-66-8F4" secondAttribute="bottom" constant="135" id="mxl-r2-WaI"/>
-                            <constraint firstItem="lme-LU-VFf" firstAttribute="width" secondItem="vYW-66-8F4" secondAttribute="width" id="rM6-xS-CWV"/>
+                            <constraint firstItem="eiH-W9-SYO" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" multiplier="0.7" id="jSa-w5-Kc7"/>
+                            <constraint firstItem="bog-g9-lge" firstAttribute="bottom" secondItem="eiH-W9-SYO" secondAttribute="bottom" constant="-20" id="kHD-ce-mb9"/>
+                            <constraint firstItem="lme-LU-VFf" firstAttribute="top" secondItem="eiH-W9-SYO" secondAttribute="bottom" id="pa9-Zh-HsI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pz0-nn-Z4B"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="deh-aA-5Js"/>
+                                <exclude reference="jSa-w5-Kc7"/>
                                 <exclude reference="daQ-Wk-nco"/>
-                                <exclude reference="V4b-9E-BH4"/>
-                                <exclude reference="Ggf-SN-XC9"/>
+                                <exclude reference="pa9-Zh-HsI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <exclude reference="6us-r9-zRl"/>
+                                <include reference="jSa-w5-Kc7"/>
                                 <exclude reference="bgN-OF-IcV"/>
-                                <include reference="deh-aA-5Js"/>
-                                <exclude reference="hsy-IR-QSe"/>
                                 <include reference="daQ-Wk-nco"/>
-                                <include reference="V4b-9E-BH4"/>
-                                <exclude reference="ZIe-UH-i4k"/>
-                                <include reference="Ggf-SN-XC9"/>
-                                <exclude reference="mxl-r2-WaI"/>
+                                <exclude reference="8Qh-i9-K3n"/>
+                                <include reference="pa9-Zh-HsI"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="1B2-oo-hKe"/>
                     <connections>
+                        <outlet property="imgPageCtrl" destination="bog-g9-lge" id="L4j-Vi-UhK"/>
                         <outlet property="productDetailsTextView" destination="hfI-XS-5US" id="tN5-td-8jG"/>
-                        <outlet property="productImgView" destination="vYW-66-8F4" id="72G-A4-D5r"/>
+                        <outlet property="productImg1" destination="sCi-aW-TBp" id="bbc-iQ-V50"/>
+                        <outlet property="productImg2" destination="Fsk-VU-a1h" id="5Kv-x0-ZHS"/>
+                        <outlet property="productImg3" destination="r8Z-HN-rDw" id="5G0-EH-iQu"/>
                         <outlet property="productInfoTextView" destination="lme-LU-VFf" id="4Ki-Wb-QW9"/>
                         <outlet property="productSpecTableView" destination="ZXE-N1-zZl" id="YIv-Wz-MYj"/>
+                        <outlet property="scrollView" destination="eiH-W9-SYO" id="dHm-o2-xyi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-ef-CWM" userLabel="First Responder" sceneMemberID="firstResponder"/>

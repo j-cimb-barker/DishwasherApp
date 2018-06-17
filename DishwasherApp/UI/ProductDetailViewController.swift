@@ -19,6 +19,14 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var productSpecTableView: UITableView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    @IBOutlet weak var productImg1: UIImageView!
+    @IBOutlet weak var productImg2: UIImageView!
+    @IBOutlet weak var productImg3: UIImageView!
+    
+    @IBOutlet weak var imgPageCtrl: UIPageControl!
     
     
     let headings = [
@@ -33,8 +41,36 @@ class ProductDetailViewController: UIViewController {
         productSpecTableView.dataSource = self
         
         // Do any additional setup after loading the view.
+        self.setupProductImages()
     }
 
+    func setupProductImages () {
+
+        let scrollViewWidth:CGFloat = self.scrollView.frame.width
+        let scrollViewHeight:CGFloat = self.scrollView.frame.height
+        
+        self.scrollView.delegate = self
+        
+        self.scrollView.contentSize = CGSize(width:scrollViewWidth * 3, height:self.scrollView.frame.height)
+        
+        self.productImg2.frame = CGRect (x: scrollViewWidth, y: 0, width: scrollViewWidth, height: scrollViewHeight)
+        
+        self.productImg3.frame = CGRect (x: scrollViewWidth * 2, y: 0, width: scrollViewWidth, height: scrollViewHeight)
+    }
+    
+    
+    @IBAction func imgPageCtrlChanged(_ sender: UIPageControl) {
+        Logging.JLog(message: "sender.currentPage : \(sender.currentPage)")
+        
+        
+        let slideToX = self.scrollView.frame.size.width * CGFloat (sender.currentPage)
+        let pageWidth = self.scrollView.frame.size.width
+        
+        self.scrollView.scrollRectToVisible(CGRect(x:slideToX, y:0, width:pageWidth, height:self.scrollView.frame.height), animated: true)
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
