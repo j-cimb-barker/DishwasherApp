@@ -37,7 +37,26 @@ class MockProduct : Product {
             "https://johnlewis.scene7.com/is/image/JohnLewis/234378764alt2?",
         ]
         
+        super.displaySpecialOffer = "Claim an extra 3 years gaurantee via Redemption\nSepcial Offer : £50 trade in until 15 Dec"
         
+        super.guranteeStr = "2 year guarantee included"
+        
+        super.features = [
+            [
+                "id" : "attr10139380720",
+                "name" : "Model name / number",
+                "toolTip" : "",
+                "uom" : "",
+                "value" : "SMV40C30GB Fully Integrated Dishwasher"
+            ],
+            [
+                "id" : "attr10139380720",
+                "name" : "Rinse Aid Indicator",
+                "toolTip" : "",
+                "uom" : "",
+                "value" : "YES"
+            ]
+        ]
         
     }
     

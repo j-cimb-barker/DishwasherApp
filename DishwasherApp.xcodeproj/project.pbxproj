@@ -154,6 +154,7 @@
 		5D3ECC5B20D3B933008CBE9E /* DishwasherApp */ = {
 			isa = PBXGroup;
 			children = (
+				5D18DB5120D6BA22009F2EB6 /* Utils */,
 				5D3ECC9220D3BEEC008CBE9E /* Logging.swift */,
 				5D3ECC8B20D3BAEE008CBE9E /* UI */,
 				5D3ECC8A20D3BAE7008CBE9E /* Core */,
@@ -209,7 +210,6 @@
 		5D3ECCA420D40B57008CBE9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5D18DB5120D6BA22009F2EB6 /* Utils */,
 				5D3ECCA520D40B5F008CBE9E /* Graphics */,
 			);
 			path = Resources;
@@ -588,7 +588,10 @@
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -605,7 +608,10 @@
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -621,7 +627,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -638,7 +648,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -654,7 +668,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -670,7 +688,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WF57Z34X8U;
 				INFOPLIST_FILE = DishwasherAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talkingcucumberltd.DishwasherAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

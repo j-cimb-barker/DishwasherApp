@@ -22,6 +22,8 @@ class Product: NSObject {
     var code = ""
     var features = [[String:Any]] ()
     
+    var displaySpecialOffer = ""
+    var guranteeStr = ""
     
     override init () {
     }
@@ -47,29 +49,36 @@ class Product: NSObject {
             processImgData(imgData: jsonDict ["media"] as! [String:Any])
         }
         
+        if jsonDict ["displaySpecialOffer"] != nil {
+            self.displaySpecialOffer = jsonDict ["displaySpecialOffer"] as! String
+        }
+        
         if jsonDict ["code"] != nil {
             self.code = jsonDict ["code"] as! String
         }
         
         if jsonDict ["details"] != nil {
-            self.details = jsonDict ["details"] as! [String:Any]
+            let detailInfo = jsonDict ["details"] as! [String:Any]
+            self.features = detailInfo ["features"] as! [[String:Any]]
         }
         
         if jsonDict ["additionalServices"] != nil {
             
             if jsonDict ["additionalServices"] is Dictionary<String,Any>  {
-                 self.additionalServices = jsonDict ["additionalServices"] as! [String:Any]
+                self.processAdditionInfo(additionalInfo: jsonDict ["additionalServices"] as! [String:Any])
             }
-            
-           
         }
+    }
+    
+    func processAdditionInfo (additionalInfo: Dictionary<String,Any>) {
         
-        if jsonDict ["features"] != nil {
-            self.features = jsonDict ["features"] as! [[String:Any]]
+        let includedServices = additionalInfo ["includedServices"] as! [String]
+        if includedServices.count > 0 {
+            self.guranteeStr = includedServices[0]
         }
         
     }
-   
+    
     func processImgData (imgData: Dictionary<String,Any>) {
         
         let prodImages = imgData ["images"] as! [String:Any]

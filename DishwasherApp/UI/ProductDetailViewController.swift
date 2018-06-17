@@ -45,7 +45,7 @@ class ProductDetailViewController: UIViewController {
         productSpecTableView.dataSource = self
         
         // Do any additional setup after loading the view.
-        
+        self.setupProductDetails()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +56,23 @@ class ProductDetailViewController: UIViewController {
         
     }
 
+    func setupProductDetails () {
+        
+        let fullDescrStr = NSMutableAttributedString()
+        
+        fullDescrStr.largePrice("£" + product.priceDict ["now"]!)
+        
+        if product.displaySpecialOffer != "" {
+            fullDescrStr.specialOffer ("\n" + product.displaySpecialOffer)
+        }
+        
+        fullDescrStr.guaranteeInfo("\n" + product.guranteeStr)
+        
+        self.productDetailsTextView.attributedText = fullDescrStr
+        
+        
+    }
+    
     func setupProductImages () {
 
         let scrollViewWidth:CGFloat = self.scrollView.frame.width
