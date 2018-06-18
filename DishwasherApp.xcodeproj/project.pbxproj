@@ -39,6 +39,8 @@
 		5D8FAE2320D7C51A0042396F /* FeatureParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE2220D7C51A0042396F /* FeatureParserTest.swift */; };
 		5D8FAE2520D7C52F0042396F /* ProductParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE2420D7C52F0042396F /* ProductParserTest.swift */; };
 		5D8FAE2720D807730042396F /* ProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE2620D807730042396F /* ProductTest.swift */; };
+		5D8FAE2820D81E4E0042396F /* ConvertHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1120D7A8BD0042396F /* ConvertHtml.swift */; };
+		5D8FAE2A20D81E770042396F /* ConvertHtmlTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE2920D81E770042396F /* ConvertHtmlTest.swift */; };
 		D12777418780FC1ACDC92071 /* Pods_DishwasherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236B0D6F90C58BC51C2B6D26 /* Pods_DishwasherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		5D8FAE2220D7C51A0042396F /* FeatureParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureParserTest.swift; sourceTree = "<group>"; };
 		5D8FAE2420D7C52F0042396F /* ProductParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductParserTest.swift; sourceTree = "<group>"; };
 		5D8FAE2620D807730042396F /* ProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTest.swift; sourceTree = "<group>"; };
+		5D8FAE2920D81E770042396F /* ConvertHtmlTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHtmlTest.swift; sourceTree = "<group>"; };
+		5D8FAE2B20D820BE0042396F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D37F27256F0C86FC1A88595C /* Pods-DishwasherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishwasherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DishwasherApp/Pods-DishwasherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 		5D3ECC5020D3B933008CBE9E = {
 			isa = PBXGroup;
 			children = (
+				5D8FAE2B20D820BE0042396F /* README.md */,
 				5D3ECCA420D40B57008CBE9E /* Resources */,
 				5D3ECC5B20D3B933008CBE9E /* DishwasherApp */,
 				5D3ECC7020D3B936008CBE9E /* DishwasherAppTests */,
@@ -197,6 +202,7 @@
 				5D8FAE2620D807730042396F /* ProductTest.swift */,
 				5D8FAE2220D7C51A0042396F /* FeatureParserTest.swift */,
 				5D8FAE2420D7C52F0042396F /* ProductParserTest.swift */,
+				5D8FAE2920D81E770042396F /* ConvertHtmlTest.swift */,
 			);
 			path = DishwasherAppTests;
 			sourceTree = "<group>";
@@ -449,11 +455,13 @@
 				5D3ECC7220D3B936008CBE9E /* DishwasherAppTests.swift in Sources */,
 				5D8FAE2320D7C51A0042396F /* FeatureParserTest.swift in Sources */,
 				5D3ECC8E20D3BB24008CBE9E /* Product.swift in Sources */,
+				5D8FAE2A20D81E770042396F /* ConvertHtmlTest.swift in Sources */,
 				5D8FAE1D20D7BE5D0042396F /* ProductParser.swift in Sources */,
 				5D3ECC9120D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
 				5D8FAE1720D7B7A20042396F /* Feature.swift in Sources */,
 				5D8FAE2720D807730042396F /* ProductTest.swift in Sources */,
 				5D8FAE2520D7C52F0042396F /* ProductParserTest.swift in Sources */,
+				5D8FAE2820D81E4E0042396F /* ConvertHtml.swift in Sources */,
 				5D3ECC9420D3BEEC008CBE9E /* Logging.swift in Sources */,
 				5D8FAE1620D7B7990042396F /* FeatureTest.swift in Sources */,
 				5D3ECC9B20D3D0ED008CBE9E /* MockProduct.swift in Sources */,

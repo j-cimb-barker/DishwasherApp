@@ -117,8 +117,6 @@ class ProductDetailViewController: UIViewController {
         
         self.imgPageCtrl.numberOfPages = self.product.images.count
         
-        //let prodImages = self.product.media ["images"] as! [String:Any]
-        
         Logging.JLog(message: "scrollViewWidth : \(scrollViewWidth)")
         
         self.scrollView.contentSize = CGSize(width:scrollViewWidth * CGFloat (self.imgPageCtrl.numberOfPages), height:self.scrollView.frame.height)
@@ -221,8 +219,9 @@ extension ProductDetailViewController : UITableViewDataSource {
         let feature = self.product.features [indexPath.row]
         
         cell.textLabel?.text = feature.name
-        //cell.accessoryType = .disclosureIndicator
         cell.detailTextLabel?.text = feature.value
+        
+        cell.selectionStyle = .none
         
         return cell
     }
