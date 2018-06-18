@@ -52,6 +52,7 @@ class ProductParserTest: XCTestCase {
         ] as [String:Any]
         
         jsonDict ["details"] = [
+            "productInformation" : "<p>the productInfo</p>",
             "features" : [
                 [
                     "attributes" : [
@@ -107,6 +108,13 @@ class ProductParserTest: XCTestCase {
         XCTAssert (parser.getPrice() == "359.00")
     }
     
+    func testGetProductInfo () {
+        
+        let jsonDict = self.makeJsonDict()
+        let parser = ProductParser (theJsonDict: jsonDict)
+        
+        XCTAssert (parser.getProductInfo() == "<p>the productInfo</p>")
+    }
     
     func testMediaImages () {
         

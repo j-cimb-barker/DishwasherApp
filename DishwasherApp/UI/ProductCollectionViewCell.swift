@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductCollectionViewCell: UICollectionViewCell {
     
@@ -39,13 +40,14 @@ class ProductCollectionViewCell: UICollectionViewCell {
     private func commonInit () {
         
         Bundle.main.loadNibNamed("ProductCollectionViewCell", owner:self, options: nil)
-        
-        Logging.JLog(message: "theView: \(theView)")
-        
         theView.frame.size = self.size
-        
-        
         self.addSubview(theView)
+    }
+    
+    func setImge (imgURL: URL) {
+        self.productImgView.sd_setImage(with: imgURL, completed: { (image, error, cacheType, imageURL) in
+        })
+        
     }
     
     // sets the description of the item

@@ -33,26 +33,42 @@ class DishwasherDataApiTest: XCTestCase {
             
             XCTAssert(errorStr == "")
             
+            
+            XCTAssert (product.title == "Bosch SMV40C30GB Fully Integrated Dishwasher")
+            XCTAssert (product.productId == "1955287")
+            XCTAssert (product.displaySpecialOffer == "")
+            XCTAssert (product.code == "88701207")
+            XCTAssert (product.price == "359.00")
+            
+            // images
             XCTAssert(product.images.count > 0)
             XCTAssert(product.images.contains("https://johnlewis.scene7.com/is/image/JohnLewis/234378764alt9?"))
 
+            // guarantee
             XCTAssert(product.guaranteeStr == "2 year guarantee included")
             
             Logging.JLog(message: "product.displaySpecialOffer : \(product.displaySpecialOffer)")
             
-            // needs a test
-            print (product.features)
+            XCTAssert(product.productInfo.starts(with: "<p>The Bosch SMV40C30GB built-in dishwasher features a range of programmes to choose from"))
             
+            // features
             let features = product.features
+            
+            XCTAssert(features.count == 32)
+            
+            var sawFeature = false
             
             for feature in features {
                 Logging.JLog(message: "feature : \(feature.description)")
+                
+                if !sawFeature {
+                    sawFeature = (feature.name == "Energy Consumption Per Standard Cycle") && (feature.value == "1.02kWh")
+                }
+                
             }
             
             
-            // Product Info
-            //print (product.details)
-            //let productInfo = product.details ["productInformation"] as! String
+            
             
             
             
@@ -71,9 +87,6 @@ class DishwasherDataApiTest: XCTestCase {
     }
     
     func testGetProducts () {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
         let exp = expectation(description: "some data found")
         
         DishwasherDataApi.shared.getAllProducts { (products :[Product], errorStr: String) in
@@ -86,6 +99,23 @@ class DishwasherDataApiTest: XCTestCase {
             XCTAssert(products.count == 20)
             
             exp.fulfill()
+            
+            var gotProductWanted = false
+            
+            for product in products {
+                
+                // check the product details were retreived ok
+                if product.productId == "1955287" {
+                    gotProductWanted = true
+                    
+                    XCTAssert (product.title == "Bosch SMV40C30GB Fully Integrated Dishwasher")
+                    XCTAssert (product.productId == "1955287")
+                    XCTAssert (product.price == "359.00")
+                    XCTAssert (product.imageURL?.absoluteString == "https://johnlewis.scene7.com/is/image/JohnLewis/234378764?")
+                }
+            }
+            
+            XCTAssert(gotProductWanted)
             
         }
         

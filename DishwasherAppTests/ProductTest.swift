@@ -52,6 +52,7 @@ class ProductTest: XCTestCase {
             ] as [String:Any]
         
         jsonDict ["details"] = [
+            "productInformation" : "<p>the productInfo</p>",
             "features" : [
                 [
                 "attributes" : [
@@ -104,6 +105,14 @@ class ProductTest: XCTestCase {
         let product = Product (jsonDict: jsonDict)
         
         XCTAssert (product.price == "359.00")
+    }
+    
+    func testGetProductInfo () {
+        
+        let jsonDict = self.makeJsonDict()
+        let product = Product (jsonDict: jsonDict)
+        
+        XCTAssert (product.productInfo == "<p>the productInfo</p>")
     }
     
     func testMediaImages () {

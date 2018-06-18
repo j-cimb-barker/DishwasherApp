@@ -44,15 +44,25 @@ class ProductDetailViewController: UIViewController {
         productSpecTableView.delegate = self
         productSpecTableView.dataSource = self
         
+        DishwasherDataApi.shared.getProduct (productId: self.product.productId) { (productGot :Product, errorStr: String) in
+            
+            self.product = productGot
+            
+            DispatchQueue.main.async { [unowned self] in
+                self.setupProductDetails()
+                self.setupProductInfo()
+                self.setupProductImages()
+            }
+        }
+        
         // Do any additional setup after loading the view.
-        self.setupProductDetails()
-        self.setupProductInfo()
+        
         
         self.navigationItem.title = self.product.title
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.setupProductImages()
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +74,14 @@ class ProductDetailViewController: UIViewController {
         let convertedStr = product.productInfo.html2String
         
         let start = convertedStr.index(convertedStr.startIndex, offsetBy: 0)
-        let end = convertedStr.index(convertedStr.startIndex, offsetBy: 300)
+        
+        var maxOffset = 300
+        
+        if convertedStr.count < maxOffset {
+            maxOffset = convertedStr.count
+        }
+        
+        let end = convertedStr.index(convertedStr.startIndex, offsetBy: maxOffset)
         let range = start..<end
         let prodInfoStr = convertedStr[range]  // play
         

@@ -21,27 +21,33 @@ class ProductsCollectionViewController: UICollectionViewController {
 
         Logging.JLog(message: "viewDidLoad")
         
-        
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
         self.collectionView!.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
-        
+        /*
+        // UI development
         for _ in 0...19 {
-            
             let mockProduct = MockProduct ()
-            
             products.append(mockProduct)
+        }
+        self.collectionView?.reloadData()
+         */
+        
+        DishwasherDataApi.shared.getAllProducts { (productsGot :[Product], errorStr: String) in
+            
+            Logging.JLog(message: "errorStr : \(errorStr)")
+            Logging.JLog(message: "productsGot : \(productsGot.count)")
+            
+            self.products = productsGot
+            
+            DispatchQueue.main.async { [unowned self] in
+                self.collectionView?.reloadData()
+            }
             
         }
-        
-        
-        self.collectionView?.reloadData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,11 +88,13 @@ class ProductsCollectionViewController: UICollectionViewController {
     
         // Configure the cell
     
-        Logging.JLog(message: "cellForItemAt")
+        
      
         let product = self.products [indexPath.row]
+        Logging.JLog(message: "product.title : \(product.title)")
         
         cell.setDescription(descr: product.title, priceStr: product.price)
+        cell.setImge(imgURL: product.imageURL!)
         
         return cell
     }

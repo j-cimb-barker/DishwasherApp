@@ -88,6 +88,18 @@ class ProductParser: NSObject {
         return ""
     }
     
+    func getProductInfo () -> String {
+        
+        var productInfo = ""
+        
+        if jsonDict ["details"] != nil {
+            let detailInfo = jsonDict ["details"] as! [String:Any]
+            productInfo = detailInfo ["productInformation"] as! String
+        }
+        
+        return productInfo
+    }
+    
     // unit tested in ProdutParserTest
     func getFeatures () -> [Feature] {
         

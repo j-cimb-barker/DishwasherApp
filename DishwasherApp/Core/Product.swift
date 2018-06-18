@@ -39,6 +39,7 @@ class Product: NSObject {
         
         self.productId = parser.getProductId()
         self.price = parser.getPrice()
+        self.productInfo = parser.getProductInfo()
         
         let imageUrlStr = parser.getImageUrlStr()
         
