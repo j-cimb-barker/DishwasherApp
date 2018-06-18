@@ -86,7 +86,7 @@ class ProductsCollectionViewController: UICollectionViewController {
      
         let product = self.products [indexPath.row]
         
-        cell.setDescription(descr: product.title, priceStr: product.priceDict ["now"]!)
+        cell.setDescription(descr: product.title, priceStr: product.price)
         
         return cell
     }

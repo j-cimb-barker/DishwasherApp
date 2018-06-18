@@ -11,20 +11,20 @@ import Foundation
 class Product: NSObject {
     
     var productId = ""
-    var priceDict = [String:String] ()
+    var price = "n/a"
     var title = ""
     
     var imageURL: URL?
     
     var images = [String] ()
-    var details = [String:Any] ()
-    var additionalServices = [String:Any] ()
+    //var additionalServices = [String:Any] ()
     var code = ""
-    var features = [[String:Any]] ()
     
     var displaySpecialOffer = ""
     var guranteeStr = ""
     var productInfo = ""
+    
+    var features = [Feature] ()
     
     override init () {
     }
@@ -35,75 +35,39 @@ class Product: NSObject {
         
         self.title = jsonDict ["title"] as! String
         
-        if jsonDict ["productId"] != nil {
-            self.productId = jsonDict ["productId"] as! String
-        }
+        let parser = ProductParser (theJsonDict: jsonDict)
 
-        self.priceDict = jsonDict ["price"] as! [String:String]
+        self.title = parser.getTitle()
         
-        if jsonDict ["image"] != nil {
-            let imgStr = jsonDict ["image"] as! String
-            self.imageURL = URL.init(string: "https:" + imgStr)
+        self.productId = parser.getProductId()
+        self.price = parser.getPrice()
+        
+        let imageUrlStr = parser.getImageUrlStr()
+        
+        if imageUrlStr != "" {
+            self.imageURL = URL.init(string: imageUrlStr)
         }
         
-        if jsonDict ["media"] != nil {
-            processImgData(imgData: jsonDict ["media"] as! [String:Any])
-        }
+        self.images = parser.getImages()
         
-        if jsonDict ["displaySpecialOffer"] != nil {
-            self.displaySpecialOffer = jsonDict ["displaySpecialOffer"] as! String
-        }
+        self.displaySpecialOffer = parser.getSpecialOffer()
         
-        if jsonDict ["code"] != nil {
-            self.code = jsonDict ["code"] as! String
-        }
+        self.code = parser.getProductCode()
         
-        if jsonDict ["details"] != nil {
-            let detailInfo = jsonDict ["details"] as! [String:Any]
-            self.details = detailInfo
-            self.features = detailInfo ["features"] as! [[String:Any]]
-        }
+        self.features = parser.getFeatures()
         
-        if jsonDict ["additionalServices"] != nil {
-            
-            if jsonDict ["additionalServices"] is Dictionary<String,Any>  {
-                self.processAdditionInfo(additionalInfo: jsonDict ["additionalServices"] as! [String:Any])
-            }
-        }
-    }
-    
-    func processAdditionInfo (additionalInfo: Dictionary<String,Any>) {
+        self.guranteeStr = parser.getGuarenteeStr()
         
-        let includedServices = additionalInfo ["includedServices"] as! [String]
-        if includedServices.count > 0 {
-            self.guranteeStr = includedServices[0]
-        }
         
     }
     
-    func processImgData (imgData: Dictionary<String,Any>) {
-        
-        let prodImages = imgData ["images"] as! [String:Any]
-        
-        Logging.JLog(message: "prodImages : \(prodImages)")
-        
-        let prodImgArray = prodImages ["urls"] as! [String]
-        
-        for prodImg in prodImgArray {
-            Logging.JLog(message: "prodImg : \(prodImg)")
-            
-            let fullImg = "https:" + prodImg
-            self.images.append(fullImg)
-        }
-        
-    }
     
     override var description : String {
         
-        var descrStr = "productId : \(productId), title : \(title), priceDict : \(priceDict)"
+        var descrStr = "productId : \(productId), title : \(title), price : \(price)"
         
-        descrStr = descrStr + ", images : \(images), details : \(details)"
-        descrStr = descrStr + ", additionalServices : \(additionalServices), features : \(features)"
+        descrStr = descrStr + ", images : \(images)"
+        descrStr = descrStr + ", features : \(features)"
         descrStr = descrStr + ", code : \(code)"
         
         return descrStr

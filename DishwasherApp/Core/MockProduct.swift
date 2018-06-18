@@ -19,14 +19,7 @@ class MockProduct : Product {
         super.productId = "3215462"
         super.title = "Bosch SMS25AW00G Freestanding Dishwasher, White"
         
-        super.priceDict = [
-            "was": "",
-            "then1": "",
-            "then2": "",
-            "now": "239.00",
-            "uom": "",
-            "currency": "GBP"
-        ]
+        super.price = "239.00"
         
         super.imageURL = URL.init(string: "https://johnlewis.scene7.com/is/image/JohnLewis/236888507?")
         
@@ -42,20 +35,21 @@ class MockProduct : Product {
         super.guranteeStr = "2 year guarantee included"
         
         super.features = [
-            [
+            
+            Feature (jsonDict: [
                 "id" : "attr10139380720",
                 "name" : "Model name / number",
                 "toolTip" : "",
                 "uom" : "",
                 "value" : "SMV40C30GB Fully Integrated Dishwasher"
-            ],
-            [
+            ]),
+            Feature (jsonDict:[
                 "id" : "attr10139380720",
                 "name" : "Rinse Aid Indicator",
                 "toolTip" : "",
                 "uom" : "",
                 "value" : "YES"
-            ]
+            ])
         ]
         
         super.productInfo = "<p>The Bosch SMV40C30GB built-in dishwasher features a range of programmes to choose from, and is rated A+ for energy efficiency so it’ll save you money on your bills and reduce your environmental impact. 12 place settings make it suitable for a family household, and a durable Polinox base will give it a long life.</p>"

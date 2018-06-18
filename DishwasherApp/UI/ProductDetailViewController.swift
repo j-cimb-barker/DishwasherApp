@@ -61,8 +61,6 @@ class ProductDetailViewController: UIViewController {
 
     func setupProductInfo () {
         
-        let htmlStringData = product.productInfo.data(using: String.Encoding.utf8)!
-        
         let convertedStr = product.productInfo.html2String
         
         let start = convertedStr.index(convertedStr.startIndex, offsetBy: 0)
@@ -73,6 +71,7 @@ class ProductDetailViewController: UIViewController {
         let fullDescrStr = NSMutableAttributedString()
         
         fullDescrStr.heading("Product Information")
+        fullDescrStr.normal("\nProduct code: \(self.product.productId)")
         fullDescrStr.normal("\n" + String(prodInfoStr) + "...")
         
         self.productInfoTextView.attributedText = fullDescrStr
@@ -83,7 +82,7 @@ class ProductDetailViewController: UIViewController {
         
         let fullDescrStr = NSMutableAttributedString()
         
-        fullDescrStr.largePrice("£" + product.priceDict ["now"]!)
+        fullDescrStr.largePrice("£" + product.price)
         
         if product.displaySpecialOffer != "" {
             fullDescrStr.specialOffer ("\n" + product.displaySpecialOffer)
@@ -204,16 +203,13 @@ extension ProductDetailViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //let cell:UITableViewCell = productDetailsTableView.dequeueReusableCell(withIdentifier: "profileCell")!
-        
         let cell:UITableViewCell = UITableViewCell.init(style: .value1, reuseIdentifier: "profileCell")
         
         let feature = self.product.features [indexPath.row]
         
-        
-        cell.textLabel?.text = feature ["name"] as? String
-        cell.accessoryType = .disclosureIndicator
-        cell.detailTextLabel?.text = feature ["value"] as? String
+        cell.textLabel?.text = feature.name
+        //cell.accessoryType = .disclosureIndicator
+        cell.detailTextLabel?.text = feature.value
         
         return cell
     }

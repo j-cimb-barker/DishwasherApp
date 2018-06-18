@@ -29,6 +29,13 @@
 		5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */; };
 		5D3ECCA320D40B4D008CBE9E /* dishwasher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */; };
 		5D8FAE1220D7A8BD0042396F /* ConvertHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1120D7A8BD0042396F /* ConvertHtml.swift */; };
+		5D8FAE1420D7B3EF0042396F /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1320D7B3EF0042396F /* Feature.swift */; };
+		5D8FAE1620D7B7990042396F /* FeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1520D7B7990042396F /* FeatureTest.swift */; };
+		5D8FAE1720D7B7A20042396F /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1320D7B3EF0042396F /* Feature.swift */; };
+		5D8FAE1920D7BD0A0042396F /* FeaturesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1820D7BD0A0042396F /* FeaturesParser.swift */; };
+		5D8FAE1A20D7BE1E0042396F /* FeaturesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1820D7BD0A0042396F /* FeaturesParser.swift */; };
+		5D8FAE1C20D7BE5D0042396F /* ProductParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1B20D7BE5D0042396F /* ProductParser.swift */; };
+		5D8FAE1D20D7BE5D0042396F /* ProductParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1B20D7BE5D0042396F /* ProductParser.swift */; };
 		D12777418780FC1ACDC92071 /* Pods_DishwasherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236B0D6F90C58BC51C2B6D26 /* Pods_DishwasherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +83,10 @@
 		5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dishwasher.jpg; sourceTree = "<group>"; };
 		5D8FAE1120D7A8BD0042396F /* ConvertHtml.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHtml.swift; sourceTree = "<group>"; };
+		5D8FAE1320D7B3EF0042396F /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		5D8FAE1520D7B7990042396F /* FeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTest.swift; sourceTree = "<group>"; };
+		5D8FAE1820D7BD0A0042396F /* FeaturesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesParser.swift; sourceTree = "<group>"; };
+		5D8FAE1B20D7BE5D0042396F /* ProductParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductParser.swift; sourceTree = "<group>"; };
 		D37F27256F0C86FC1A88595C /* Pods-DishwasherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishwasherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DishwasherApp/Pods-DishwasherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +187,7 @@
 				5D3ECC7120D3B936008CBE9E /* DishwasherAppTests.swift */,
 				5D3ECC7320D3B936008CBE9E /* Info.plist */,
 				5D3ECC9520D3BF62008CBE9E /* DishwasherDataApiTest.swift */,
+				5D8FAE1520D7B7990042396F /* FeatureTest.swift */,
 			);
 			path = DishwasherAppTests;
 			sourceTree = "<group>";
@@ -195,6 +207,9 @@
 				5D3ECC8C20D3BB24008CBE9E /* Product.swift */,
 				5D3ECC8F20D3BDFD008CBE9E /* DishwasherDataApi.swift */,
 				5D3ECC9920D3D0ED008CBE9E /* MockProduct.swift */,
+				5D8FAE1320D7B3EF0042396F /* Feature.swift */,
+				5D8FAE1820D7BD0A0042396F /* FeaturesParser.swift */,
+				5D8FAE1B20D7BE5D0042396F /* ProductParser.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -403,8 +418,11 @@
 				5D3ECC9020D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
 				5D3ECC9320D3BEEC008CBE9E /* Logging.swift in Sources */,
 				5D3ECC9D20D3DFB1008CBE9E /* ProductCollectionViewCell.swift in Sources */,
+				5D8FAE1C20D7BE5D0042396F /* ProductParser.swift in Sources */,
+				5D8FAE1920D7BD0A0042396F /* FeaturesParser.swift in Sources */,
 				5D3ECC5D20D3B933008CBE9E /* AppDelegate.swift in Sources */,
 				5D3ECC9820D3D024008CBE9E /* ProductsCollectionViewController.swift in Sources */,
+				5D8FAE1420D7B3EF0042396F /* Feature.swift in Sources */,
 				5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */,
 				5D3ECC8D20D3BB24008CBE9E /* Product.swift in Sources */,
 				5D18DB5320D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift in Sources */,
@@ -417,11 +435,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8FAE1A20D7BE1E0042396F /* FeaturesParser.swift in Sources */,
 				5D3ECC9620D3BF62008CBE9E /* DishwasherDataApiTest.swift in Sources */,
 				5D3ECC7220D3B936008CBE9E /* DishwasherAppTests.swift in Sources */,
 				5D3ECC8E20D3BB24008CBE9E /* Product.swift in Sources */,
+				5D8FAE1D20D7BE5D0042396F /* ProductParser.swift in Sources */,
 				5D3ECC9120D3BDFD008CBE9E /* DishwasherDataApi.swift in Sources */,
+				5D8FAE1720D7B7A20042396F /* Feature.swift in Sources */,
 				5D3ECC9420D3BEEC008CBE9E /* Logging.swift in Sources */,
+				5D8FAE1620D7B7990042396F /* FeatureTest.swift in Sources */,
 				5D3ECC9B20D3D0ED008CBE9E /* MockProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,7 +45,7 @@ class DishwasherDataApiTest: XCTestCase {
             
             
             // Product Info
-            print (product.details)
+            //print (product.details)
             //let productInfo = product.details ["productInformation"] as! String
             
             
@@ -69,8 +69,6 @@ class DishwasherDataApiTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let exp = expectation(description: "some data found")
-        
-        
         
         DishwasherDataApi.shared.getAllProducts { (products :[Product], errorStr: String) in
             
