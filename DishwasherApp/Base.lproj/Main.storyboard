@@ -91,10 +91,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-XS-5US">
-                                <rect key="frame" x="0.0" y="438" width="230.5" height="102.5"/>
+                                <rect key="frame" x="0.0" y="438" width="307" height="154"/>
                                 <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hfI-XS-5US" secondAttribute="height" multiplier="299:133" id="dY4-eO-vxR"/>
+                                    <constraint firstAttribute="width" secondItem="hfI-XS-5US" secondAttribute="height" multiplier="299:150" id="dY4-eO-vxR"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="£489.00">
@@ -107,7 +107,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lme-LU-VFf">
-                                <rect key="frame" x="0.0" y="540.5" width="768" height="122.5"/>
+                                <rect key="frame" x="0.0" y="592" width="768" height="122.5"/>
                                 <color key="backgroundColor" red="1" green="0.42625336209999998" blue="0.46162378840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Product Information">
@@ -120,7 +120,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZXE-N1-zZl">
-                                <rect key="frame" x="0.0" y="670.5" width="768" height="353"/>
+                                <rect key="frame" x="0.0" y="722" width="768" height="301.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCell" id="TLB-up-8Zg">
@@ -175,7 +175,7 @@
                             <constraint firstItem="ZXE-N1-zZl" firstAttribute="leading" secondItem="pz0-nn-Z4B" secondAttribute="leading" id="5uo-8d-GJX"/>
                             <constraint firstItem="eiH-W9-SYO" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" id="6us-r9-zRl"/>
                             <constraint firstItem="lme-LU-VFf" firstAttribute="top" secondItem="hfI-XS-5US" secondAttribute="bottom" id="8Qh-i9-K3n"/>
-                            <constraint firstItem="hfI-XS-5US" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" multiplier="0.3" id="A2Y-Qc-hsx"/>
+                            <constraint firstItem="hfI-XS-5US" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" multiplier="0.4" id="A2Y-Qc-hsx"/>
                             <constraint firstItem="lme-LU-VFf" firstAttribute="width" secondItem="eiH-W9-SYO" secondAttribute="width" id="Cx7-DW-pVl"/>
                             <constraint firstItem="ZXE-N1-zZl" firstAttribute="width" secondItem="eiH-W9-SYO" secondAttribute="width" id="LmB-HB-kxM"/>
                             <constraint firstItem="lme-LU-VFf" firstAttribute="leading" secondItem="pz0-nn-Z4B" secondAttribute="leading" id="N6H-fI-HAo"/>
@@ -188,7 +188,7 @@
                             <constraint firstItem="hfI-XS-5US" firstAttribute="trailing" secondItem="pz0-nn-Z4B" secondAttribute="trailing" id="daQ-Wk-nco"/>
                             <constraint firstItem="bog-g9-lge" firstAttribute="width" secondItem="eiH-W9-SYO" secondAttribute="width" multiplier="0.1" id="htR-O6-7eV"/>
                             <constraint firstItem="lme-LU-VFf" firstAttribute="height" secondItem="R5v-fT-pgz" secondAttribute="height" multiplier="0.12" id="iJt-3o-dxI"/>
-                            <constraint firstItem="eiH-W9-SYO" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" multiplier="0.7" id="jSa-w5-Kc7"/>
+                            <constraint firstItem="eiH-W9-SYO" firstAttribute="width" secondItem="R5v-fT-pgz" secondAttribute="width" multiplier="0.6" id="jSa-w5-Kc7"/>
                             <constraint firstItem="bog-g9-lge" firstAttribute="bottom" secondItem="eiH-W9-SYO" secondAttribute="bottom" id="kHD-ce-mb9"/>
                             <constraint firstItem="lme-LU-VFf" firstAttribute="top" secondItem="eiH-W9-SYO" secondAttribute="bottom" id="pa9-Zh-HsI"/>
                             <constraint firstItem="hfI-XS-5US" firstAttribute="top" secondItem="eiH-W9-SYO" secondAttribute="bottom" id="wk8-yE-OVP"/>

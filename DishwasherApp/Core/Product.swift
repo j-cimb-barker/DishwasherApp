@@ -24,6 +24,7 @@ class Product: NSObject {
     
     var displaySpecialOffer = ""
     var guranteeStr = ""
+    var productInfo = ""
     
     override init () {
     }
@@ -59,6 +60,7 @@ class Product: NSObject {
         
         if jsonDict ["details"] != nil {
             let detailInfo = jsonDict ["details"] as! [String:Any]
+            self.details = detailInfo
             self.features = detailInfo ["features"] as! [[String:Any]]
         }
         

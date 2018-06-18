@@ -45,8 +45,9 @@ class DishwasherDataApiTest: XCTestCase {
             
             
             // Product Info
+            print (product.details)
             //let productInfo = product.details ["productInformation"] as! String
-            //print (productInfo)
+            
             
             
             
