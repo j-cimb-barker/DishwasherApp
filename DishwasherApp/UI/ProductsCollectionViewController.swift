@@ -51,9 +51,6 @@ class ProductsCollectionViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,14 +84,12 @@ class ProductsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductCollectionViewCell
     
         // Configure the cell
-    
-        
      
         let product = self.products [indexPath.row]
         Logging.JLog(message: "product.title : \(product.title)")
         
         cell.setDescription(descr: product.title, priceStr: product.price)
-        cell.setImge(imgURL: product.imageURL!)
+        cell.setImg(imgURL: product.imageURL!)
         
         return cell
     }
@@ -102,49 +97,12 @@ class ProductsCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        Logging.JLog(message: "got tap")
-        //self.performSegue(withIdentifier: "showDetail", sender: self)
-        
+
         let detailController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
         detailController.product = self.products [indexPath.row]
         
-        
         self.navigationController?.pushViewController(detailController, animated: true)
-        
-        
     }
-    
-    
-    
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
 extension ProductsCollectionViewController : UICollectionViewDelegateFlowLayout {
@@ -153,12 +111,14 @@ extension ProductsCollectionViewController : UICollectionViewDelegateFlowLayout 
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        //return CGSize(width: 151, height: 175)
+        // should not be hard-coded...
         return CGSize(width: 200, height: 250)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+
+        // should not be hard-coded...
         return 120
     }
     

@@ -122,6 +122,8 @@ class ProductParser: NSObject {
             Logging.JLog(message: "features.count : \(features.count)")
         }
         
+        features.sort { $0.name < $1.name }
+        
         return features
     }
     

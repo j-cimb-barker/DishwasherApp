@@ -11,8 +11,6 @@ import SDWebImage
 
 class ProductCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var testLabel: UILabel!
-    
     @IBOutlet weak var productImgView: UIImageView!
     
     @IBOutlet weak var productTextView: UITextView!
@@ -24,9 +22,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        Logging.JLog(message: "initWithFrame : \(frame)")
-        
-        //self.frame = frame
         self.size = frame.size
         
         commonInit ()
@@ -44,10 +39,9 @@ class ProductCollectionViewCell: UICollectionViewCell {
         self.addSubview(theView)
     }
     
-    func setImge (imgURL: URL) {
+    func setImg (imgURL: URL) {
         self.productImgView.sd_setImage(with: imgURL, completed: { (image, error, cacheType, imageURL) in
         })
-        
     }
     
     // sets the description of the item

@@ -32,12 +32,7 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var imgPageCtrl: UIPageControl!
     
-    
-    let headings = [
-        "Heading1",
-        "Heading2"
-    ]
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,6 +47,7 @@ class ProductDetailViewController: UIViewController {
                 self.setupProductDetails()
                 self.setupProductInfo()
                 self.setupProductImages()
+                self.productSpecTableView.reloadData()
             }
         }
         

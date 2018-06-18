@@ -20,6 +20,10 @@ class DishwasherDataApiTest: XCTestCase {
         super.tearDown()
     }
 
+    
+
+        
+        
     func testGetProduct () {
 
         let exp = expectation(description: "some data found")
@@ -49,6 +53,7 @@ class DishwasherDataApiTest: XCTestCase {
             
             Logging.JLog(message: "product.displaySpecialOffer : \(product.displaySpecialOffer)")
             
+            // product info
             XCTAssert(product.productInfo.starts(with: "<p>The Bosch SMV40C30GB built-in dishwasher features a range of programmes to choose from"))
             
             // features
@@ -67,12 +72,6 @@ class DishwasherDataApiTest: XCTestCase {
                 
             }
             
-            
-            
-            
-            
-            
-            
             exp.fulfill()
             
         }
@@ -84,6 +83,36 @@ class DishwasherDataApiTest: XCTestCase {
             }
         }
         
+    }
+    
+    func testGetProductWithSpecialOffer () {
+        
+        let exp = expectation(description: "some data found")
+        
+        let productId = "3244905"
+        
+        DishwasherDataApi.shared.getProduct (productId: productId) { (product :Product, errorStr: String) in
+            
+            Logging.JLog(message: "errorStr : \(errorStr)")
+            Logging.JLog(message: "product : \(product.description)")
+            
+            XCTAssert(errorStr == "")
+            
+            XCTAssert (product.title == "Neff S513K60X0G Integrated Dishwasher")
+            XCTAssert (product.productId == "3244905")
+            XCTAssert (product.displaySpecialOffer == "Claim up to £50 off when you trade in an old appliance")
+            XCTAssert (product.code == "88701308")
+            XCTAssert (product.price == "479.00")
+            
+            exp.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: 20) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
     }
     
     func testGetProducts () {
