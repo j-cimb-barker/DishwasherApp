@@ -21,10 +21,12 @@ class ProductParser: NSObject {
         self.jsonDict = theJsonDict
     }
     
+    // unit tested in ProdutParserTest
     func getTitle () -> String {
         return jsonDict ["title"] as! String
     }
-    
+
+    // unit tested in ProdutParserTest
     func getProductId () -> String {
         
         var productId = ""
@@ -35,11 +37,13 @@ class ProductParser: NSObject {
         
         return productId
     }
-    
+
+    // unit tested in ProdutParserTest
     func getPrice () -> String {
         return self.processPrice(priceDict: jsonDict ["price"] as! [String:String])
     }
     
+    // unit tested in ProdutParserTest
     func getImageUrlStr () -> String {
         
         var imageUrlStr = ""
@@ -52,6 +56,7 @@ class ProductParser: NSObject {
         return imageUrlStr
     }
     
+    // unit tested in ProdutParserTest
     func getImages () -> [String] {
         
         var images = [String] ()
@@ -63,6 +68,7 @@ class ProductParser: NSObject {
         return images
     }
     
+    // unit tested in ProdutParserTest
     func getSpecialOffer () -> String {
         
         if jsonDict ["displaySpecialOffer"] != nil {
@@ -72,6 +78,7 @@ class ProductParser: NSObject {
         return ""
     }
     
+    // unit tested in ProdutParserTest
     func getProductCode () -> String {
         
         if jsonDict ["code"] != nil {
@@ -81,6 +88,7 @@ class ProductParser: NSObject {
         return ""
     }
     
+    // unit tested in ProdutParserTest
     func getFeatures () -> [Feature] {
         
         var features = [Feature] ()
@@ -88,12 +96,24 @@ class ProductParser: NSObject {
         if jsonDict ["details"] != nil {
             let detailInfo = jsonDict ["details"] as! [String:Any]
             
-            features = self.processFeatures(featuresArray: detailInfo ["features"] as! [[String:Any]])
+            
+            
+            let featuresArray = detailInfo ["features"] as! [[String:Any]]
+            
+            let featuresArrayFirst = featuresArray.first
+            
+            
+            let allFeatures = featuresArrayFirst! ["attributes"] as! [[String:Any]]
+            print (allFeatures)
+            
+            features = self.processFeatures(featuresArray: allFeatures)
+            Logging.JLog(message: "features.count : \(features.count)")
         }
         
         return features
     }
     
+    // unit tested in ProdutParserTest
     func getGuarenteeStr () -> String {
         
         if jsonDict ["additionalServices"] != nil {
@@ -139,6 +159,7 @@ class ProductParser: NSObject {
         return ""
     }
     
+    // unit tested in ProdutParserTest
     func processImgData (imgData: Dictionary<String,Any>) -> [String] {
         
         var images = [String] ()

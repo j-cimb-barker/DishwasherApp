@@ -17,11 +17,11 @@ class Product: NSObject {
     var imageURL: URL?
     
     var images = [String] ()
-    //var additionalServices = [String:Any] ()
+
     var code = ""
     
     var displaySpecialOffer = ""
-    var guranteeStr = ""
+    var guaranteeStr = ""
     var productInfo = ""
     
     var features = [Feature] ()
@@ -32,8 +32,6 @@ class Product: NSObject {
     init (jsonDict: [String : Any]) {
         
         super.init()
-        
-        self.title = jsonDict ["title"] as! String
         
         let parser = ProductParser (theJsonDict: jsonDict)
 
@@ -56,7 +54,7 @@ class Product: NSObject {
         
         self.features = parser.getFeatures()
         
-        self.guranteeStr = parser.getGuarenteeStr()
+        self.guaranteeStr = parser.getGuarenteeStr()
         
         
     }

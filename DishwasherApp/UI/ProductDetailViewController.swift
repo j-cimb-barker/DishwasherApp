@@ -88,7 +88,7 @@ class ProductDetailViewController: UIViewController {
             fullDescrStr.specialOffer ("\n" + product.displaySpecialOffer)
         }
         
-        fullDescrStr.guaranteeInfo("\n" + product.guranteeStr)
+        fullDescrStr.guaranteeInfo("\n" + product.guaranteeStr)
         
         self.productDetailsTextView.attributedText = fullDescrStr
         

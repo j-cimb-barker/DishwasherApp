@@ -36,12 +36,18 @@ class DishwasherDataApiTest: XCTestCase {
             XCTAssert(product.images.count > 0)
             XCTAssert(product.images.contains("https://johnlewis.scene7.com/is/image/JohnLewis/234378764alt9?"))
 
-            XCTAssert(product.guranteeStr == "2 year guarantee included")
+            XCTAssert(product.guaranteeStr == "2 year guarantee included")
             
             Logging.JLog(message: "product.displaySpecialOffer : \(product.displaySpecialOffer)")
             
             // needs a test
             print (product.features)
+            
+            let features = product.features
+            
+            for feature in features {
+                Logging.JLog(message: "feature : \(feature.description)")
+            }
             
             
             // Product Info

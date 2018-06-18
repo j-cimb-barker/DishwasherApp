@@ -26,4 +26,10 @@ class Feature: NSObject {
     }
     
    
+    override var description : String {
+        
+        let descrStr = "name : \(self.name), value : \(self.value)"
+        return descrStr
+    }
+    
 }

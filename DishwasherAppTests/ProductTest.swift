@@ -1,5 +1,5 @@
 //
-//  ProductParserTest.swift
+//  ProductTest.swift
 //  DishwasherAppTests
 //
 //  Created by Josh Barker on 18/06/2018.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ProductParserTest: XCTestCase {
+class ProductTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -29,7 +29,7 @@ class ProductParserTest: XCTestCase {
             "displaySpecialOffer" : "theDisplaySpecialOffer",
             "image" : "//johnlewis.scene7.com/is/image/JohnLewis/234378764?",
             "code" : "12345"
-        ] as [String:Any]
+            ] as [String:Any]
         
         jsonDict ["media"] = [
             "360images" : [
@@ -49,18 +49,18 @@ class ProductParserTest: XCTestCase {
             ],
             "videos" : [
             ]
-        ] as [String:Any]
+            ] as [String:Any]
         
         jsonDict ["details"] = [
             "features" : [
                 [
-                    "attributes" : [
-                        [
-                            "id" : "attr10139380720",
-                            "name" : "Model name / number",
-                            "toolTip" : "",
-                            "uom" : "",
-                            "value" : "SMV40C30GB Fully Integrated Dishwasher"
+                "attributes" : [
+                    [
+                        "id" : "attr10139380720",
+                        "name" : "Model name / number",
+                        "toolTip" : "",
+                        "uom" : "",
+                        "value" : "SMV40C30GB Fully Integrated Dishwasher"
                         ]
                     ]
                 ]
@@ -71,7 +71,7 @@ class ProductParserTest: XCTestCase {
             "includedServices" : [
                 "2 year guarantee included"
             ]
-        ] as [String:Any]
+            ] as [String:Any]
         
         jsonDict ["price"] = [
             "currency" : "GBP",
@@ -89,31 +89,29 @@ class ProductParserTest: XCTestCase {
     func testBasicItems() {
         
         let jsonDict = self.makeJsonDict()
+        let product = Product (jsonDict: jsonDict)
         
-        let parser = ProductParser (theJsonDict: jsonDict)
-        
-        XCTAssert (parser.getTitle() == "theTitle")
-        XCTAssert (parser.getProductId() == "theProductId")
-        XCTAssert (parser.getSpecialOffer() == "theDisplaySpecialOffer")
-        XCTAssert (parser.getProductCode() == "12345")
-        XCTAssert (parser.getImageUrlStr() == "https://johnlewis.scene7.com/is/image/JohnLewis/234378764?")
+        XCTAssert (product.title == "theTitle")
+        XCTAssert (product.productId == "theProductId")
+        XCTAssert (product.displaySpecialOffer == "theDisplaySpecialOffer")
+        XCTAssert (product.code == "12345")
+        XCTAssert (product.imageURL?.absoluteString == "https://johnlewis.scene7.com/is/image/JohnLewis/234378764?")
     }
     
     func testGetPrice () {
         
         let jsonDict = self.makeJsonDict()
-        let parser = ProductParser (theJsonDict: jsonDict)
+        let product = Product (jsonDict: jsonDict)
         
-        XCTAssert (parser.getPrice() == "359.00")
+        XCTAssert (product.price == "359.00")
     }
-    
     
     func testMediaImages () {
         
         let jsonDict = self.makeJsonDict()
-        let parser = ProductParser (theJsonDict: jsonDict)
+        let product = Product (jsonDict: jsonDict)
         
-        let imgs = parser.getImages()
+        let imgs = product.images
         
         XCTAssert(imgs.count > 0)
         XCTAssert(imgs.contains("https://johnlewis.scene7.com/is/image/JohnLewis/234378764alt3?"))
@@ -122,9 +120,9 @@ class ProductParserTest: XCTestCase {
     func testGetFeatures () {
         
         let jsonDict = self.makeJsonDict()
-        let parser = ProductParser (theJsonDict: jsonDict)
+        let product = Product (jsonDict: jsonDict)
         
-        let features = parser.getFeatures()
+        let features = product.features
         
         XCTAssert(features.count > 0)
         
@@ -142,10 +140,11 @@ class ProductParserTest: XCTestCase {
     func testGetGuarantee () {
         
         let jsonDict = self.makeJsonDict()
-        let parser = ProductParser (theJsonDict: jsonDict)
+        let product = Product (jsonDict: jsonDict)
         
-        XCTAssert (parser.getGuarenteeStr() == "2 year guarantee included")
+        XCTAssert (product.guaranteeStr == "2 year guarantee included")
     }
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

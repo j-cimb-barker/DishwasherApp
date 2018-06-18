@@ -34,7 +34,7 @@ class MockProduct : Product {
         
         super.displaySpecialOffer = "Claim an extra 3 years gaurantee via Redemption\nSepcial Offer : £50 trade in until 15 Dec"
         
-        super.guranteeStr = "2 year guarantee included"
+        super.guaranteeStr = "2 year guarantee included"
         
         super.features = [
             
