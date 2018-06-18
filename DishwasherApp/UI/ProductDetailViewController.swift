@@ -46,6 +46,9 @@ class ProductDetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         self.setupProductDetails()
+        self.setupProductInfo()
+        
+        self.navigationItem.title = self.product.title
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +59,26 @@ class ProductDetailViewController: UIViewController {
         
     }
 
+    func setupProductInfo () {
+        
+        let htmlStringData = product.productInfo.data(using: String.Encoding.utf8)!
+        
+        let convertedStr = product.productInfo.html2String
+        
+        let start = convertedStr.index(convertedStr.startIndex, offsetBy: 0)
+        let end = convertedStr.index(convertedStr.startIndex, offsetBy: 300)
+        let range = start..<end
+        let prodInfoStr = convertedStr[range]  // play
+        
+        let fullDescrStr = NSMutableAttributedString()
+        
+        fullDescrStr.heading("Product Information")
+        fullDescrStr.normal("\n" + String(prodInfoStr) + "...")
+        
+        self.productInfoTextView.attributedText = fullDescrStr
+        
+    }
+    
     func setupProductDetails () {
         
         let fullDescrStr = NSMutableAttributedString()
@@ -96,19 +119,7 @@ class ProductDetailViewController: UIViewController {
             imgView.contentMode = .scaleAspectFit
             
             imgView.sd_setImage(with: URL(string: self.product.images[counter]), completed: { (image, error, cacheType, imageURL) in
-                // Perform operation.
-                
-                /*
-                Logging.JLog(message: "got img with size : \(image?.size)")
-                
-                var resizedImg = self.resizeImage(image: image!, newWidth: imgView.frame.size.width)
-                imgView.image = resizedImg*/
-                
             })
-            
-            //imgView.sd_setImage(with: URL(string: self.product.images[counter]), placeholderImage: UIImage(named: "placeholder.png"))
-            //imgView.frame = imgViewFrame
-            
             
             self.scrollView.addSubview(imgView)
             
@@ -120,17 +131,7 @@ class ProductDetailViewController: UIViewController {
         self.productImg3.frame = CGRect (x: scrollViewWidth * 2, y: 0, width: scrollViewWidth, height: scrollViewHeight)
     }
     
-    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
-        
-        let scale = newWidth / image.size.width
-        let newHeight = image.size.height * scale
-        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
-    }
+    
     
     
     
@@ -194,11 +195,11 @@ extension ProductDetailViewController : UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Product Information"
+        return "Product Specification"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.headings.count
+        return self.product.features.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -207,10 +208,12 @@ extension ProductDetailViewController : UITableViewDataSource {
         
         let cell:UITableViewCell = UITableViewCell.init(style: .value1, reuseIdentifier: "profileCell")
         
+        let feature = self.product.features [indexPath.row]
         
-        cell.textLabel?.text = "Hello"
+        
+        cell.textLabel?.text = feature ["name"] as? String
         cell.accessoryType = .disclosureIndicator
-        cell.detailTextLabel?.text = "Detail"
+        cell.detailTextLabel?.text = feature ["value"] as? String
         
         return cell
     }

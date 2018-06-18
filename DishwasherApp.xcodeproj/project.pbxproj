@@ -28,6 +28,7 @@
 		5D3ECC9F20D3E486008CBE9E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */; };
 		5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */; };
 		5D3ECCA320D40B4D008CBE9E /* dishwasher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */; };
+		5D8FAE1220D7A8BD0042396F /* ConvertHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8FAE1120D7A8BD0042396F /* ConvertHtml.swift */; };
 		D12777418780FC1ACDC92071 /* Pods_DishwasherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236B0D6F90C58BC51C2B6D26 /* Pods_DishwasherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		5D3ECC9E20D3E486008CBE9E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		5D3ECCA020D402EB008CBE9E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		5D3ECCA220D40B4C008CBE9E /* dishwasher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dishwasher.jpg; sourceTree = "<group>"; };
+		5D8FAE1120D7A8BD0042396F /* ConvertHtml.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHtml.swift; sourceTree = "<group>"; };
 		D37F27256F0C86FC1A88595C /* Pods-DishwasherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishwasherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DishwasherApp/Pods-DishwasherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				5D18DB5220D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift */,
+				5D8FAE1120D7A8BD0042396F /* ConvertHtml.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				5D3ECCA120D402EB008CBE9E /* ProductDetailViewController.swift in Sources */,
 				5D3ECC8D20D3BB24008CBE9E /* Product.swift in Sources */,
 				5D18DB5320D6BA32009F2EB6 /* NSMutableAttributedString+Utils.swift in Sources */,
+				5D8FAE1220D7A8BD0042396F /* ConvertHtml.swift in Sources */,
 				5D3ECC9A20D3D0ED008CBE9E /* MockProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

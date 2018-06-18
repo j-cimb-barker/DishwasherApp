@@ -64,7 +64,7 @@ class MockProduct : Product {
         super.productInfo = super.productInfo + "<p><strong>Quiet</strong><br />At just 50dB, the SMV40C30GB has a low noise level, so once you’ve put your dishes in the wash you can enjoy the rest of your evening in peace. The lack of annoying background noise is especially handy if you’re entertaining guests.</p>"
         super.productInfo = super.productInfo + "<p><strong>VarioBaskets</strong><br />With VarioBaskets, you can enjoy a flexible storage space which can be customised to fit your kitchen items inside efficiently. This is handy for washing particularly large items.</p>"
         super.productInfo = super.productInfo + "<p><strong>InfoLight</strong><br />The InfoLight feature lets you know when the dishwasher is in use by projecting a dot of light onto the floor. This will prevent you from accidentally opening the door mid-cycle.</p>"
-        super.productInfo = "super.productInfo + <p><strong>Please note:&nbsp;</strong>Although the depth of this model is 55cm, please allow 57cm for installation.</p>"
+        super.productInfo = super.productInfo + "<p><strong>Please note:&nbsp;</strong>Although the depth of this model is 55cm, please allow 57cm for installation.</p>"
         
     }
     

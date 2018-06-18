@@ -10,6 +10,18 @@ import Foundation
 import UIKit
 
 extension NSMutableAttributedString {
+    
+    @discardableResult func heading(_ text: String) -> NSMutableAttributedString {
+        
+        let boldFont = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)
+        
+        let attrs: [NSAttributedStringKey: Any] = [.font: boldFont]
+        let boldString = NSMutableAttributedString(string:text, attributes: attrs)
+        append(boldString)
+        
+        return self
+    }
+    
     @discardableResult func bold(_ text: String) -> NSMutableAttributedString {
         
         let boldFont = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.bold)

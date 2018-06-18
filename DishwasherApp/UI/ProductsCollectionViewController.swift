@@ -100,6 +100,7 @@ class ProductsCollectionViewController: UICollectionViewController {
         let detailController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
         detailController.product = self.products [indexPath.row]
         
+        
         self.navigationController?.pushViewController(detailController, animated: true)
         
         
