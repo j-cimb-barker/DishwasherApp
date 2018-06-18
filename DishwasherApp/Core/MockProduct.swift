@@ -17,6 +17,8 @@ class MockProduct : Product {
         super.init()
         
         super.productId = "3215462"
+        super.code = "3215462"
+
         super.title = "Bosch SMS25AW00G Freestanding Dishwasher, White"
         
         super.price = "239.00"

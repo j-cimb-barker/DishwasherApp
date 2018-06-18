@@ -19,7 +19,7 @@ class Feature: NSObject {
     init (jsonDict: [String : Any]) {
         super.init()
         
-        let parser = FeaturesParser (theJsonDict: jsonDict)
+        let parser = FeatureParser (theJsonDict: jsonDict)
         
         self.name = parser.getName()
         self.value = parser.getValue()

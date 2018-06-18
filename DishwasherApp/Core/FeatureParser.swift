@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeaturesParser: NSObject {
+class FeatureParser: NSObject {
 
     var jsonDict = [String : Any] ()
     

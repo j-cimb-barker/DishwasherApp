@@ -19,7 +19,12 @@ class DishwasherDataApi {
         
         self.getDataFromApi (urlStr: urlStr) { (dataGot :Dictionary<String, Any>, errorStr: String) in
             
-            Logging.JLog(message: "dataGot : \(dataGot)")
+            print ("dataGot")
+            print (dataGot)
+            
+            print ("dataGot End")
+            
+            //Logging.JLog(message: "dataGot : \(dataGot)")
             
             let product = Product (jsonDict: dataGot)
             

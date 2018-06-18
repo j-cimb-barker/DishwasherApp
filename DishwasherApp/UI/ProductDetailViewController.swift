@@ -71,7 +71,7 @@ class ProductDetailViewController: UIViewController {
         let fullDescrStr = NSMutableAttributedString()
         
         fullDescrStr.heading("Product Information")
-        fullDescrStr.normal("\nProduct code: \(self.product.productId)")
+        fullDescrStr.normal("\nProduct code: \(self.product.code)")
         fullDescrStr.normal("\n" + String(prodInfoStr) + "...")
         
         self.productInfoTextView.attributedText = fullDescrStr
